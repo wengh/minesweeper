@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Minesweeper+</name>
+    <description></description>
+    <version>0.1.0.0</version>
+    <author>Weng Haoyu</author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.wenghy.minesweeper</app-id>
+    <unique-id>1wnzjo0xcadyd</unique-id>
+    <saved-with-version>25200</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
+        <plugin author="Scirra" id="sliderbar" version="1">Slider bar</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>600</width>
+        <height>350</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Base" sid="759775919400151">
+            <plugin id="Tilemap" />
+            <instance-variables>
+                <instance-variable name="Generated" sid="270321287170028" type="boolean" />
+            </instance-variables>
+            <texture original-source="C:\Users\whyha\Downloads\minesweeper.png" />
+            <tiles />
+        </object-type>
+        <object-type name="Mouse" sid="961313189159791">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Cover" sid="299108651003234">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="111928461391740">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\whyha\Downloads\minesweeper.png" />
+            <tiles />
+        </object-type>
+        <object-type global="1" name="3x3" sid="550127965495132">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="f" sid="937182745305420">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Sprite" sid="973245863483351">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="321654560028728">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Peer</type>
+                <type>Sprite</type>
+                <type>PlayerName</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995736430967114" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.533333">
+                        <collision-poly>
+                            <point x="0.1" y="0.1" />
+                            <point x="0.933333" y="0.1" />
+                            <point x="0.933333" y="0.933333" />
+                            <point x="0.1" y="0.933333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Peer" sid="511795394736714">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="health" sid="734092596584645" type="number" />
+                <instance-variable name="peerid" sid="800244146564155" type="string" />
+                <instance-variable name="alias" sid="266881727193768" type="string" />
+                <instance-variable name="inputs" sid="384824837399487" type="number" />
+                <instance-variable name="mousex" sid="998349528680456" type="number" />
+                <instance-variable name="mousey" sid="698342053180576" type="number" />
+                <instance-variable name="firstClick" sid="789771380846412" type="boolean" />
+                <instance-variable name="score" sid="422041959773142" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="463193637685411">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="419233971921450">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="334936739825502">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Peer</type>
+                <type>Sprite</type>
+                <type>PlayerName</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="360243319192397" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Explosion" sid="883382399468317">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="394847736377802">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="219681916363025" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Documents\SimpleRockets\Explosion.1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Documents\SimpleRockets\Explosion.2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Documents\SimpleRockets\Explosion.3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Documents\SimpleRockets\Explosion.4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Documents\SimpleRockets\Explosion.5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Documents\SimpleRockets\Explosion.6.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Documents\SimpleRockets\Explosion.7.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Documents\SimpleRockets\Explosion.8.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Documents\SimpleRockets\Explosion.9.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Documents\SimpleRockets\Explosion.10.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="225090786460178">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Bullet" sid="815003424760860">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="721002588984120">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="601490702018038">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="953503982329029">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="926946369203496" speed="5">
+                    <frame duration="1" hotspotX="0.777778" hotspotY="0.6" original-source="C:\Users\user\Downloads\bullet.png">
+                        <collision-poly>
+                            <point x="0.272727" y="0.4" />
+                            <point x="0.454545" y="0.2" />
+                            <point x="0.818182" y="0.2" />
+                            <point x="0.909091" y="0.4" />
+                            <point x="0.818182" y="0.8" />
+                            <point x="0.454545" y="0.8" />
+                            <point x="0.0909091" y="0.4" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Title" sid="762375631397256">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="StartButton" sid="516397157529916">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Difficulty" sid="772471749849911">
+            <plugin id="sliderbar" />
+        </object-type>
+        <object-type name="HealthBar" sid="791883699490599">
+            <plugin id="progressbar" />
+        </object-type>
+        <object-type name="Nickname" sid="137129886876913">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="PlayerName" sid="165269700642965">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="525590653630848">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Peer</type>
+                <type>Sprite</type>
+                <type>PlayerName</type>
+            </container>
+        </object-type>
+        <object-type name="mp" sid="287158401978729">
+            <plugin id="Multiplayer" />
+        </object-type>
+        <object-type name="Message" sid="255943685973298">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="906417011664856">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="MPButton" sid="864740733045985">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="MPState" sid="871150538228511">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ConnectButton" sid="858118893883711">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Audio" sid="244473712661453">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Language" sid="962605030909229">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="Banner" sid="914694316277331">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="310844894369568" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="445337603065423">
+            <plugin id="Touch" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>MainMenuLayout.xml</layout>
+        <layout>GameLayout.xml</layout>
+        <layout>MultiplayerLayout.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Game.xml</event-sheet>
+        <event-sheet>MainMenu.xml</event-sheet>
+        <event-sheet>MPMenu.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="1" />
+        <global-instance type="f" uid="4" />
+        <global-instance type="Keyboard" uid="8" />
+        <global-instance type="mp" uid="16" />
+        <global-instance type="Audio" uid="11">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Touch" uid="27">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="Explosion.m4a" />
+        <file name="Explosion.ogg" />
+        <file name="Click.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
