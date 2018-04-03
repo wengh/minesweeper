@@ -858,6 +858,9 @@
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;fuse&quot;</param>
                         </action>
+                        <action behavior="Sine" id="1" name="Set period" sid="304170082129242" type="Grenade">
+                            <param id="0" name="Period">distance(Peer.X, Peer.Y, Mouse.X, Mouse.Y) / Grenade.Bullet.Speed * 2</param>
+                        </action>
                         <action id="-10" name="Set value" sid="105492589077888" type="Peer">
                             <param id="0" name="Instance variable">cooldown</param>
                             <param id="1" name="Value">2</param>

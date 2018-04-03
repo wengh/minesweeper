@@ -383,9 +383,9 @@
                                 <wave>Sine</wave>
                                 <period>4</period>
                                 <period-random>0</period-random>
-                                <period-offset>-1</period-offset>
+                                <period-offset>0</period-offset>
                                 <period-offset-random>0</period-offset-random>
-                                <magnitude>5</magnitude>
+                                <magnitude>10</magnitude>
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
@@ -401,11 +401,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>244.294067383</x>
-                        <y>230.351242065</y>
+                        <x>336</x>
+                        <y>-230</y>
                         <z>0</z>
-                        <width>12</width>
-                        <height>24</height>
+                        <width>8</width>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5625</hotspotY>
