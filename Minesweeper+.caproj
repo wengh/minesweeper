@@ -31,6 +31,9 @@
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -58,7 +61,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -126,6 +129,7 @@
                 <instance-variable name="mousey" sid="698342053180576" type="number" />
                 <instance-variable name="firstClick" sid="789771380846412" type="boolean" />
                 <instance-variable name="score" sid="422041959773142" type="number" />
+                <instance-variable name="cooldown" sid="484817907566216" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="463193637685411">
@@ -151,11 +155,6 @@
         </object-type>
         <object-type name="Explosion" sid="883382399468317">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Fade" sid="394847736377802">
-                    <behavior id="Fade" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
                 <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="219681916363025" speed="10">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Documents\SimpleRockets\Explosion.1.png" />
@@ -267,6 +266,41 @@
         </object-type>
         <object-type name="Touch" sid="445337603065423">
             <plugin id="Touch" />
+        </object-type>
+        <object-type name="Grenade" sid="160295734601018">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="535305851403899">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="405409552759859">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="816850135978289">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="247385236609958">
+                    <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="801930885163152">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="770170876872478" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5625">
+                        <collision-poly>
+                            <point x="0.21875" y="0.566406" />
+                            <point x="0.351563" y="0.453125" />
+                            <point x="0.625" y="0.453125" />
+                            <point x="0.791016" y="0.546387" />
+                            <point x="0.769531" y="0.670898" />
+                            <point x="0.515625" y="0.744141" />
+                            <point x="0.265625" y="0.679688" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

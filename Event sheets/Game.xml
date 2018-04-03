@@ -773,7 +773,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="184833616587034">
+                <event-block any="1" sid="184833616587034">
                     <conditions>
                         <condition id="2" name="Key is down" sid="407907433385988" type="Keyboard">
                             <param id="0" name="Key">87</param>
@@ -788,7 +788,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="129023889079670">
+                <event-block any="1" sid="129023889079670">
                     <conditions>
                         <condition id="2" name="Key is down" sid="287175097373580" type="Keyboard">
                             <param id="0" name="Key">65</param>
@@ -803,7 +803,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="557848225838680">
+                <event-block any="1" sid="557848225838680">
                     <conditions>
                         <condition id="2" name="Key is down" sid="481781779632750" type="Keyboard">
                             <param id="0" name="Key">83</param>
@@ -818,7 +818,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="909631713502107">
+                <event-block any="1" sid="909631713502107">
                     <conditions>
                         <condition id="2" name="Key is down" sid="742136259260960" type="Keyboard">
                             <param id="0" name="Key">68</param>
@@ -833,22 +833,63 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="415814498844736">
+                <event-block sid="415814498844736">
                     <conditions>
                         <condition id="2" name="Key is down" sid="500481501692548" type="Keyboard">
                             <param id="0" name="Key">32</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="647544681509495" type="Peer">
+                            <param id="0" name="Instance variable">cooldown</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="108981754405540" type="Sprite">
-                            <param id="0" name="Object">Bullet</param>
+                        <action id="0" name="Spawn another object" sid="108981754405540" type="Peer">
+                            <param id="0" name="Object">Grenade</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-22" name="Set angle toward position" sid="631218579533389" type="Bullet">
-                            <param id="0" name="X">Mouse.X</param>
-                            <param id="1" name="Y">Mouse.Y</param>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="631218579533389" type="Grenade">
+                            <param id="0" name="Angle">angle(Peer.X, Peer.Y, Mouse.X, Mouse.Y)</param>
                         </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="905127722309789" type="Grenade">
+                            <param id="0" name="Duration">distance(Peer.X, Peer.Y, Mouse.X, Mouse.Y) / Grenade.Bullet.Speed</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;fuse&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="105492589077888" type="Peer">
+                            <param id="0" name="Instance variable">cooldown</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="357191801252093">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="342765683202009" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="188844975955197" type="Peer">
+                            <param id="0" name="Instance variable">cooldown</param>
+                            <param id="1" name="Value">0.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="903247043184651">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="166453079853526" type="Grenade">
+                            <param id="0" name="Tag">&quot;fuse&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="419625918395555" type="Grenade">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="727919299968000" type="Grenade" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -2617,5 +2658,15 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="488306774575360">
+            <conditions>
+                <condition id="4" name="On finished" sid="303050190038803" type="Explosion">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="962926850635889" type="Explosion" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
