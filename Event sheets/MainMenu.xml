@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MainMenu</name>
+    <events>
+        <event-block sid="697373191686267">
+            <conditions>
+                <condition id="0" name="On clicked" sid="813393664280232" type="StartButton" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="898350965560679" type="System">
+                    <param id="0" name="Variable">count</param>
+                    <param id="1" name="Value">Difficulty.Value</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="137631863521541" type="System">
+                    <param id="0" name="Layout">GameLayout</param>
+                </action>
+                <action id="0" name="Call function" sid="566314459207029" type="f">
+                    <param id="0" name="Name">&quot;Localize&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-12" name="Set group active" sid="137176874415150" type="System">
+                    <param id="0" name="Group name">&quot;Local&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="188729824116164">
+                    <conditions>
+                        <condition id="0" inverted="1" name="Compare text" sid="361813772872424" type="Nickname">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="808935268110820" type="System">
+                            <param id="0" name="Variable">name</param>
+                            <param id="1" name="Value">Nickname.Text</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="921793632437240">
+            <conditions>
+                <condition id="0" name="On clicked" sid="223747707094062" type="MPButton" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="766705341725922" type="System">
+                    <param id="0" name="Variable">count</param>
+                    <param id="1" name="Value">Difficulty.Value</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="907640266520894" type="System">
+                    <param id="0" name="Layout">MultiplayerLayout</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="557689303135433">
+                    <conditions>
+                        <condition id="0" inverted="1" name="Compare text" sid="117853204674994" type="Nickname">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="610163891812059" type="System">
+                            <param id="0" name="Variable">name</param>
+                            <param id="1" name="Value">Nickname.Text</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="484467120187460">
+            <conditions>
+                <condition id="1" name="On selection changed" sid="853255672199536" type="Language" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="442397165321104" type="System">
+                    <param id="0" name="Variable">loc</param>
+                    <param id="1" name="Value">Language.SelectedIndex</param>
+                </action>
+                <action id="0" name="Call function" sid="484530769286942" type="f">
+                    <param id="0" name="Name">&quot;Localize&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="122362768594262">
+            <conditions>
+                <condition id="0" name="On function" sid="270121982689186" type="f">
+                    <param id="0" name="Name">&quot;Localize&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="150860242622692">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="319226884883108" type="System">
+                            <param id="0" name="Variable">loc</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="860207465746646" type="Title">
+                            <param id="0" name="Text">&quot;Minesweeper+&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="340663475527521" type="StartButton">
+                            <param id="0" name="Text">&quot;Singleplayer&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="513728200101055" type="MPButton">
+                            <param id="0" name="Text">&quot;Multiplayer&quot;</param>
+                        </action>
+                        <action id="1" name="Set placeholder" sid="212726670588457" type="Nickname">
+                            <param id="0" name="Placeholder">&quot;Nickname&quot;</param>
+                        </action>
+                        <action id="0" name="Set tooltip" sid="501932628723665" type="Difficulty">
+                            <param id="0" name="Tooltip">&quot;Number of mines&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="155451975616210">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="234656819372923" type="System">
+                            <param id="0" name="Variable">loc</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="943922996852012" type="Title">
+                            <param id="0" name="Text">&quot;Démineur+&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="247901771385247" type="StartButton">
+                            <param id="0" name="Text">&quot;Solo&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="950275120425325" type="MPButton">
+                            <param id="0" name="Text">&quot;Multi-joueur&quot;</param>
+                        </action>
+                        <action id="1" name="Set placeholder" sid="774046244960201" type="Nickname">
+                            <param id="0" name="Placeholder">&quot;Surnom&quot;</param>
+                        </action>
+                        <action id="0" name="Set tooltip" sid="647831812264729" type="Difficulty">
+                            <param id="0" name="Tooltip">&quot;Nombre de mines&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="545559277025359">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="762595959131933" type="System">
+                            <param id="0" name="Variable">loc</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="368035986760166" type="Title">
+                            <param id="0" name="Text">&quot;扫雷+&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="528254572814653" type="StartButton">
+                            <param id="0" name="Text">&quot;单人游戏&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="964755093632559" type="MPButton">
+                            <param id="0" name="Text">&quot;联机&quot;</param>
+                        </action>
+                        <action id="1" name="Set placeholder" sid="970767634524377" type="Nickname">
+                            <param id="0" name="Placeholder">&quot;昵称&quot;</param>
+                        </action>
+                        <action id="0" name="Set tooltip" sid="377650572325774" type="Difficulty">
+                            <param id="0" name="Tooltip">&quot;地雷数量&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
