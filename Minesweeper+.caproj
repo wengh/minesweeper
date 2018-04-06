@@ -269,6 +269,9 @@
         </object-type>
         <object-type name="Grenade" sid="160295734601018">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="direction" sid="569899197641526" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="535305851403899">
                     <behavior id="Bullet" />

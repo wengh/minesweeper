@@ -861,6 +861,9 @@
                         <action behavior="Sine" id="1" name="Set period" sid="304170082129242" type="Grenade">
                             <param id="0" name="Period">distance(Peer.X, Peer.Y, Mouse.X, Mouse.Y) / Grenade.Bullet.Speed * 2</param>
                         </action>
+                        <action behavior="Rotate" id="0" name="Set speed" sid="119573762407411" type="Grenade">
+                            <param id="0" name="Speed">random(-360, 360)</param>
+                        </action>
                         <action id="-10" name="Set value" sid="105492589077888" type="Peer">
                             <param id="0" name="Instance variable">cooldown</param>
                             <param id="1" name="Value">2</param>
@@ -1184,6 +1187,33 @@
                                         <action id="-10" name="Set value" sid="899827803263051" type="Peer">
                                             <param id="0" name="Instance variable">inputs</param>
                                             <param id="1" name="Value">setbit(Self.inputs, 5, 0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="448924747517611">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="966829127677484" type="Keyboard">
+                                            <param id="0" name="Key">81</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="395746073968273" type="Keyboard">
+                                            <param id="0" name="Key">32</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="532897722216128" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 6, 1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="586381748097125">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="665137215025596" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="330889934332654" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 6, 0)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1607,6 +1637,28 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="771174678373832">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="735941829952923" type="Grenade" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="898738830961739" type="Grenade">
+                                    <param id="0" name="Angle">Self.direction</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="295061134466231">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="340812068537598" type="Grenade" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="688812030171696" type="Grenade">
+                                    <param id="0" name="Object">Explosion</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="671865252066225">
                             <conditions>
                                 <condition id="15" name="On peer message" sid="615932514521731" type="mp">
@@ -1841,6 +1893,14 @@
                                 <action id="3" name="Set progress" sid="520683087436282" type="HealthBar">
                                     <param id="0" name="Value">Peer.health</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="932735483709638" type="Peer">
+                                    <param id="0" name="Instance variable">mousex</param>
+                                    <param id="1" name="Value">Mouse.X</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="177664305256249" type="Peer">
+                                    <param id="0" name="Instance variable">mousey</param>
+                                    <param id="1" name="Value">Mouse.Y</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block any="1" sid="892707732865486">
@@ -1951,6 +2011,33 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block any="1" sid="389678006241170">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="682942419444672" type="Keyboard">
+                                            <param id="0" name="Key">81</param>
+                                        </condition>
+                                        <condition id="2" name="Key is down" sid="776140678808591" type="Keyboard">
+                                            <param id="0" name="Key">32</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="258439715302894" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 6, 1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="684624784460492">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="477952644195446" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="196173425379642" type="Peer">
+                                            <param id="0" name="Instance variable">inputs</param>
+                                            <param id="1" name="Value">setbit(Self.inputs, 6, 0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="662386948791254">
@@ -2037,49 +2124,68 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Clique de souris</comment>
                         <event-block bookmark="1" sid="561222803548368">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="361625889993155" type="System">
                                     <param id="0" name="Object">Peer</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="533124641088956" type="System">
+                                    <param id="0" name="Variable">x</param>
+                                    <param id="1" name="Value">Base.PositionToTileX(Peer.mousex)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="816789343405185" type="System">
+                                    <param id="0" name="Variable">y</param>
+                                    <param id="1" name="Value">Base.PositionToTileY(Peer.mousey)</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block sid="661500034666732">
+                                <event-block sid="615511764226181">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="738484189091396" type="Peer">
-                                            <param id="0" name="Instance variable">peerid</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">mp.MyID</param>
+                                        <condition id="-8" name="Compare two values" sid="810206321586243" type="System">
+                                            <param id="0" name="First value">getbit(Peer.inputs, 6)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="396141617692268" type="Peer">
+                                            <param id="0" name="Instance variable">cooldown</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Set value" sid="585787710050565" type="System">
-                                            <param id="0" name="Variable">x</param>
-                                            <param id="1" name="Value">Base.PositionToTileX(mp.PeerState(Peer.peerid, &quot;mousex&quot;))</param>
+                                        <action id="-3" name="Create object" sid="118226739590569" type="System">
+                                            <param id="0" name="Object to create">Grenade</param>
+                                            <param id="1" name="Layer">2</param>
+                                            <param id="2" name="X">Peer.X</param>
+                                            <param id="3" name="Y">Peer.Y</param>
                                         </action>
-                                        <action id="-9" name="Set value" sid="392013461872986" type="System">
-                                            <param id="0" name="Variable">y</param>
-                                            <param id="1" name="Value">Base.PositionToTileY(mp.PeerState(Peer.peerid, &quot;mousey&quot;))</param>
+                                        <action id="-10" name="Set value" sid="362644246755342" type="Grenade">
+                                            <param id="0" name="Instance variable">direction</param>
+                                            <param id="1" name="Value">angle(Peer.X, Peer.Y, Peer.mousex, Peer.mousey)</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="971240245467833" type="Grenade">
+                                            <param id="0" name="Angle">Self.direction</param>
+                                        </action>
+                                        <action behavior="Timer" id="0" name="Start timer" sid="797475771627103" type="Grenade">
+                                            <param id="0" name="Duration">distance(Peer.X, Peer.Y, Peer.mousex, Peer.mousey) / Self.Bullet.Speed</param>
+                                            <param id="1" name="Type">0</param>
+                                            <param id="2" name="Tag">&quot;fuse&quot;</param>
+                                        </action>
+                                        <action behavior="Sine" id="1" name="Set period" sid="704979161186823" type="Grenade">
+                                            <param id="0" name="Period">distance(Peer.X, Peer.Y, Peer.mousex, Peer.mousey) / Self.Bullet.Speed * 2</param>
+                                        </action>
+                                        <action behavior="Rotate" id="0" name="Set speed" sid="537919199015816" type="Grenade">
+                                            <param id="0" name="Speed">random(-360, 360)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="826390570410234" type="Peer">
+                                            <param id="0" name="Instance variable">cooldown</param>
+                                            <param id="1" name="Value">2</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="260806187915567">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="452428676754741" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="223219164784679" type="System">
-                                            <param id="0" name="Variable">x</param>
-                                            <param id="1" name="Value">Base.PositionToTileX(Mouse.X)</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="996193918104545" type="System">
-                                            <param id="0" name="Variable">y</param>
-                                            <param id="1" name="Value">Base.PositionToTileY(Mouse.Y)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
+                                <comment>Clique de souris</comment>
                                 <event-block sid="299427830763198">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="761839512123300" type="System">
@@ -2547,20 +2653,34 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="574272498586417">
+                            <conditions>
+                                <condition behavior="Timer" id="0" name="On timer" sid="560159199507825" type="Grenade">
+                                    <param id="0" name="Tag">&quot;fuse&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="785547983636703" type="Grenade">
+                                    <param id="0" name="Object">Explosion</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="950085443465114" type="Grenade" />
+                            </actions>
+                        </event-block>
                         <event-block sid="291361061902096">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="921128801989371" type="System">
                                     <param id="0" name="Interval (seconds)">0.1</param>
                                 </condition>
-                                <condition id="-14" name="Compare variable" sid="805111494995407" type="System">
-                                    <param id="0" name="Variable">syncCooldown</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-11" name="Subtract from" sid="711091695908264" type="System">
                                     <param id="0" name="Variable">syncCooldown</param>
+                                    <param id="1" name="Value">0.1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="590173012907418" type="Peer">
+                                    <param id="0" name="Instance variable">cooldown</param>
                                     <param id="1" name="Value">0.1</param>
                                 </action>
                             </actions>
@@ -2623,6 +2743,19 @@
                         <action id="2" name="Set CSS style" sid="664304173194318" type="HealthBar">
                             <param id="0" name="Property name">&quot;color&quot;</param>
                             <param id="1" name="Value">&quot;red&quot;</param>
+                        </action>
+                        <action id="11" name="Sync object" sid="859159281846837" type="mp">
+                            <param id="0" name="Object">Grenade</param>
+                            <param id="1" name="Data">1</param>
+                            <param id="2" name="Precision">1</param>
+                            <param id="3" name="Bandwidth">1</param>
+                        </action>
+                        <action id="12" name="Sync instance variable" sid="738146692368087" type="mp">
+                            <param id="0" name="Object">Grenade</param>
+                            <param id="1" name="Instance variable">Grenade|direction</param>
+                            <param id="2" name="Precision">2</param>
+                            <param id="3" name="Interpolation">0</param>
+                            <param id="4" name="Client value tag">&quot;&quot;</param>
                         </action>
                     </actions>
                     <sub-events>
