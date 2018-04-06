@@ -152,14 +152,38 @@
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="2" name="Erase tile range" sid="741251610205683" type="Cover">
-                                    <param id="0" name="Tile X">0</param>
-                                    <param id="1" name="Tile Y">0</param>
-                                    <param id="2" name="Width">width</param>
-                                    <param id="3" name="Height">height</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="511765888756652">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="112096921266330" type="System">
+                                            <param id="0" name="Variable">multiplayer</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="2" name="Erase tile range" sid="741251610205683" type="Cover">
+                                            <param id="0" name="Tile X">0</param>
+                                            <param id="1" name="Tile Y">0</param>
+                                            <param id="2" name="Width">width</param>
+                                            <param id="3" name="Height">height</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="775089328666696">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="640007106321261" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="21" name="Kick peer" sid="608427175884177" type="mp">
+                                            <param id="0" name="Peer ID">Peer.peerid</param>
+                                            <param id="1" name="Reason">&quot;Death&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="959863444229583" type="Peer" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="236965221389994">
                             <conditions>
