@@ -1,5 +1,5 @@
 @echo off
-set msg="Update"
+set msg=Update
 set /p msg="Enter commit message: "
 @echo on
 git add -A
