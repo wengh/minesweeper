@@ -21,6 +21,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
@@ -61,7 +62,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -121,7 +122,8 @@
         <object-type name="Peer" sid="511795394736714">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="health" sid="734092596584645" type="number" />
+                <instance-variable name="lives" sid="734092596584645" type="number" />
+                <instance-variable name="health" sid="873403692937594" type="number" />
                 <instance-variable name="peerid" sid="800244146564155" type="string" />
                 <instance-variable name="alias" sid="266881727193768" type="string" />
                 <instance-variable name="inputs" sid="384824837399487" type="number" />
@@ -172,35 +174,6 @@
         </object-type>
         <object-type name="Keyboard" sid="225090786460178">
             <plugin id="Keyboard" />
-        </object-type>
-        <object-type name="Bullet" sid="815003424760860">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="DestroyOutsideLayout" sid="721002588984120">
-                    <behavior id="destroy" />
-                </behavior-type>
-                <behavior-type name="Bullet" sid="601490702018038">
-                    <behavior id="Bullet" />
-                </behavior-type>
-                <behavior-type name="Fade" sid="953503982329029">
-                    <behavior id="Fade" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="926946369203496" speed="5">
-                    <frame duration="1" hotspotX="0.777778" hotspotY="0.6" original-source="C:\Users\user\Downloads\bullet.png">
-                        <collision-poly>
-                            <point x="0.272727" y="0.4" />
-                            <point x="0.454545" y="0.2" />
-                            <point x="0.818182" y="0.2" />
-                            <point x="0.909091" y="0.4" />
-                            <point x="0.818182" y="0.8" />
-                            <point x="0.454545" y="0.8" />
-                            <point x="0.0909091" y="0.4" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
         </object-type>
         <object-type name="Title" sid="762375631397256">
             <plugin id="Text" />
@@ -304,6 +277,10 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Heart" sid="314533627957001">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\whyha\Downloads\Heart.png" />
         </object-type>
     </object-folder>
     <families />

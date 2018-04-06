@@ -128,7 +128,7 @@
                             <param id="7" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-12" name="Subtract from" sid="938083279127136" type="Peer">
-                            <param id="0" name="Instance variable">health</param>
+                            <param id="0" name="Instance variable">lives</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="236818225742940" type="Peer">
@@ -147,7 +147,7 @@
                         <event-block sid="311233729320783">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="784556863848781" type="Peer">
-                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="0" name="Instance variable">lives</param>
                                     <param id="1" name="Comparison">3</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
@@ -194,8 +194,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="3" name="Set progress" sid="555708960449950" type="HealthBar">
-                                    <param id="0" name="Value">Peer.health</param>
+                                <action id="-5" name="Set width" sid="936756802668848" type="Heart">
+                                    <param id="0" name="Width">9 * Peer.lives</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -233,7 +233,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set tooltip" sid="804286062700143" type="HealthBar">
-                                    <param id="0" name="Tooltip">&quot;Quantité de vies&quot;</param>
+                                    <param id="0" name="Tooltip">&quot;Dégâts&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -247,7 +247,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set tooltip" sid="905599712193949" type="HealthBar">
-                                    <param id="0" name="Tooltip">&quot;生命值&quot;</param>
+                                    <param id="0" name="Tooltip">&quot;血量&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -857,78 +857,13 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="415814498844736">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="500481501692548" type="Keyboard">
-                            <param id="0" name="Key">32</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="647544681509495" type="Peer">
-                            <param id="0" name="Instance variable">cooldown</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="108981754405540" type="Peer">
-                            <param id="0" name="Object">Grenade</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="631218579533389" type="Grenade">
-                            <param id="0" name="Angle">angle(Peer.X, Peer.Y, Mouse.X, Mouse.Y)</param>
-                        </action>
-                        <action behavior="Timer" id="0" name="Start timer" sid="905127722309789" type="Grenade">
-                            <param id="0" name="Duration">distance(Peer.X, Peer.Y, Mouse.X, Mouse.Y) / Grenade.Bullet.Speed</param>
-                            <param id="1" name="Type">0</param>
-                            <param id="2" name="Tag">&quot;fuse&quot;</param>
-                        </action>
-                        <action behavior="Sine" id="1" name="Set period" sid="304170082129242" type="Grenade">
-                            <param id="0" name="Period">distance(Peer.X, Peer.Y, Mouse.X, Mouse.Y) / Grenade.Bullet.Speed * 2</param>
-                        </action>
-                        <action behavior="Rotate" id="0" name="Set speed" sid="119573762407411" type="Grenade">
-                            <param id="0" name="Speed">random(-360, 360)</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="105492589077888" type="Peer">
-                            <param id="0" name="Instance variable">cooldown</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="357191801252093">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="342765683202009" type="System">
-                            <param id="0" name="Interval (seconds)">0.1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Subtract from" sid="188844975955197" type="Peer">
-                            <param id="0" name="Instance variable">cooldown</param>
-                            <param id="1" name="Value">0.1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="903247043184651">
-                    <conditions>
-                        <condition behavior="Timer" id="0" name="On timer" sid="166453079853526" type="Grenade">
-                            <param id="0" name="Tag">&quot;fuse&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="419625918395555" type="Grenade">
-                            <param id="0" name="Object">Explosion</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="727919299968000" type="Grenade" />
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" inactive="1" sid="288539859886485" title="Multiplayer">
             <sub-events>
                 <event-group description="" inactive="1" sid="925808660508785" title="Peer">
                     <sub-events>
-                        <variable constant="0" name="lastHealth" sid="778036113443952" static="1" type="number">5</variable>
+                        <variable constant="0" name="lastLive" sid="778036113443952" static="1" type="number">5</variable>
                         <event-block sid="671459069560231">
                             <conditions>
                                 <condition id="-18" name="On created" sid="703938028249351" type="Peer" />
@@ -979,8 +914,8 @@
                                             <param id="0" name="Object">Peer</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="832538859833608" type="System">
-                                            <param id="0" name="Variable">lastHealth</param>
-                                            <param id="1" name="Value">Peer.health</param>
+                                            <param id="0" name="Variable">lastLive</param>
+                                            <param id="1" name="Value">Peer.lives</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1019,17 +954,14 @@
                                 <event-block sid="643806576285117">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="996735261285934" type="Peer">
-                                            <param id="0" name="Instance variable">health</param>
+                                            <param id="0" name="Instance variable">lives</param>
                                             <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">lastHealth</param>
+                                            <param id="2" name="Value">lastLive</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="3" name="Set progress" sid="241245806710411" type="HealthBar">
-                                            <param id="0" name="Value">Peer.health</param>
-                                        </action>
-                                        <action id="3" name="Set progress" sid="362380975896096" type="HealthBar">
-                                            <param id="0" name="Value">Peer.health</param>
+                                        <action id="-5" name="Set width" sid="166790196791256" type="Heart">
+                                            <param id="0" name="Width">9 * Peer.lives</param>
                                         </action>
                                         <action behavior="ScrollTo" id="0" name="Shake" sid="366224266141551" type="Peer">
                                             <param id="0" name="Magnitude">20</param>
@@ -1053,8 +985,8 @@
                                             <param id="7" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="814084999275764" type="System">
-                                            <param id="0" name="Variable">lastHealth</param>
-                                            <param id="1" name="Value">Peer.health</param>
+                                            <param id="0" name="Variable">lastLive</param>
+                                            <param id="1" name="Value">Peer.lives</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1681,6 +1613,16 @@
                                     <param id="1" name="Layer">2</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
+                                <action id="25" name="Play at object" sid="274427380925141" type="Audio">
+                                    <param id="0" name="Audio file">Explosion</param>
+                                    <param id="1" name="Loop">0</param>
+                                    <param id="2" name="Volume">0</param>
+                                    <param id="3" name="Object">Grenade</param>
+                                    <param id="4" name="Inner angle">360</param>
+                                    <param id="5" name="Outer angle">360</param>
+                                    <param id="6" name="Outer gain">0</param>
+                                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="671865252066225">
@@ -1736,6 +1678,17 @@
                                     <param id="0" name="Pin to">Peer</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="953517195068574" type="PlayerName">
+                                    <param id="0" name="Pin to">Peer</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="525921775832812" type="PlayerName">
+                                    <param id="0" name="Text">name</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="966435787034590" type="Peer">
+                                    <param id="0" name="X">random(0, LayoutWidth)</param>
+                                    <param id="1" name="Y">random(0, LayoutHeight)</param>
+                                </action>
                                 <action id="-9" name="Set value" sid="200547692871005" type="System">
                                     <param id="0" name="Variable">x</param>
                                     <param id="1" name="Value">Base.PositionToTileX(Peer.X)</param>
@@ -1745,21 +1698,14 @@
                                     <param id="1" name="Value">Base.PositionToTileY(Peer.Y)</param>
                                 </action>
                                 <action id="2" name="Erase tile range" sid="104047655151183" type="Cover">
-                                    <param id="0" name="Tile X">x - 1</param>
-                                    <param id="1" name="Tile Y">y - 1</param>
-                                    <param id="2" name="Width">3</param>
-                                    <param id="3" name="Height">3</param>
+                                    <param id="0" name="Tile X">x - 2</param>
+                                    <param id="1" name="Tile Y">y - 2</param>
+                                    <param id="2" name="Width">5</param>
+                                    <param id="3" name="Height">5</param>
                                 </action>
                                 <action id="2" name="Set CSS style" sid="538383185283951" type="HealthBar">
                                     <param id="0" name="Property name">&quot;color&quot;</param>
                                     <param id="1" name="Value">&quot;red&quot;</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="953517195068574" type="PlayerName">
-                                    <param id="0" name="Pin to">Peer</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                                <action id="0" name="Set text" sid="525921775832812" type="PlayerName">
-                                    <param id="0" name="Text">name</param>
                                 </action>
                                 <action id="26" name="Set listener object" sid="888007518660305" type="Audio">
                                     <param id="0" name="Object">Peer</param>
@@ -1866,8 +1812,8 @@
                                 <action id="-3" name="Create object" sid="769046438690053" type="System">
                                     <param id="0" name="Object to create">Peer</param>
                                     <param id="1" name="Layer">2</param>
-                                    <param id="2" name="X">250</param>
-                                    <param id="3" name="Y">250</param>
+                                    <param id="2" name="X">random(0, LayoutWidth)</param>
+                                    <param id="3" name="Y">random(0, LayoutHeight)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="764077531855906" type="Peer">
                                     <param id="0" name="Instance variable">peerid</param>
@@ -1899,6 +1845,20 @@
                                     <param id="0" name="Pin to">Peer</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="887993031272853" type="System">
+                                    <param id="0" name="Variable">x</param>
+                                    <param id="1" name="Value">Base.PositionToTileX(Peer.X)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="593841496068729" type="System">
+                                    <param id="0" name="Variable">y</param>
+                                    <param id="1" name="Value">Base.PositionToTileY(Peer.Y)</param>
+                                </action>
+                                <action id="2" name="Erase tile range" sid="918992526701056" type="Cover">
+                                    <param id="0" name="Tile X">x - 2</param>
+                                    <param id="1" name="Tile Y">y - 2</param>
+                                    <param id="2" name="Width">5</param>
+                                    <param id="3" name="Height">5</param>
+                                </action>
                                 <action id="0" name="Call function" sid="353065404740799" type="f">
                                     <param id="0" name="Name">&quot;SyncTiles&quot;</param>
                                     <param id="1" name="Parameter {n}">3</param>
@@ -1914,8 +1874,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="3" name="Set progress" sid="520683087436282" type="HealthBar">
-                                    <param id="0" name="Value">Peer.health</param>
+                                <action id="-5" name="Set width" sid="517546797274279" type="Heart">
+                                    <param id="0" name="Width">9 * Peer.lives</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="932735483709638" type="Peer">
                                     <param id="0" name="Instance variable">mousex</param>
@@ -2689,8 +2649,33 @@
                                     <param id="1" name="Layer">2</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
+                                <action id="25" name="Play at object" sid="656868491286687" type="Audio">
+                                    <param id="0" name="Audio file">Explosion</param>
+                                    <param id="1" name="Loop">0</param>
+                                    <param id="2" name="Volume">0</param>
+                                    <param id="3" name="Object">Grenade</param>
+                                    <param id="4" name="Inner angle">360</param>
+                                    <param id="5" name="Outer angle">360</param>
+                                    <param id="6" name="Outer gain">0</param>
+                                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="-9" name="Destroy" sid="950085443465114" type="Grenade" />
                             </actions>
+                            <sub-events>
+                                <event-block sid="467178912446085">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="872000168876871" type="System">
+                                            <param id="0" name="Object">Peer</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="381353584582000" type="Peer">
+                                            <param id="0" name="Instance variable">health</param>
+                                            <param id="1" name="Value">max(0, 50 - distance(Peer.X, Peer.Y, Explosion.X, Explosion.Y))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="291361061902096">
                             <conditions>
@@ -2709,9 +2694,58 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="225998182454656">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="355560859146674" type="System">
+                                    <param id="0" name="Interval (seconds)">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="294132483452717" type="Peer">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <comment>Initialisation multi-joueur</comment>
+                <variable constant="0" name="lastHealth" sid="555419483493397" static="1" type="number">100</variable>
+                <event-block sid="500673350627537">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="591495142732712" type="Peer">
+                            <param id="0" name="Instance variable">peerid</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">mp.MyID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set progress" sid="250721151161361" type="HealthBar">
+                            <param id="0" name="Value">Peer.health</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="547002168097007">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="680366097788599" type="Peer">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="569390210642910" type="Peer">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">100</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="483935250503632" type="Peer">
+                                    <param id="0" name="Instance variable">lives</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="571210242226127">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="579849607432416" type="System" />
@@ -2739,6 +2773,13 @@
                             <param id="3" name="Bandwidth">0</param>
                         </action>
                         <action id="12" name="Sync instance variable" sid="169247710924018" type="mp">
+                            <param id="0" name="Object">Peer</param>
+                            <param id="1" name="Instance variable">Peer|lives</param>
+                            <param id="2" name="Precision">3</param>
+                            <param id="3" name="Interpolation">0</param>
+                            <param id="4" name="Client value tag">&quot;&quot;</param>
+                        </action>
+                        <action id="12" name="Sync instance variable" sid="464278681108949" type="mp">
                             <param id="0" name="Object">Peer</param>
                             <param id="1" name="Instance variable">Peer|health</param>
                             <param id="2" name="Precision">3</param>

@@ -35,7 +35,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Peer/" />
         <folder expanded="1" path="animation-folder/Explosion/" />
-        <folder expanded="1" path="animation-folder/Bullet/" />
         <folder expanded="1" path="animation-folder/Banner/" />
         <folder expanded="1" path="animation-folder/Grenade/" />
     </folders-expanded>
