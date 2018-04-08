@@ -419,7 +419,7 @@
                         <opacity>0.75</opacity>
                     </world>
                 </instance>
-                <instance type="Player" uid="31">
+                <instance type="Marker" uid="31">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

@@ -2799,7 +2799,28 @@
                             <param id="0" name="Object">Peer</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-3" name="Set position" sid="275180644237618" type="Marker">
+                            <param id="0" name="X">Minimap.X - 80 + Base.PositionToTileX(Peer.X)</param>
+                            <param id="1" name="Y">Minimap.Y - 60 + Base.PositionToTileY(Peer.Y)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="456912158372576">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="771357020955011" type="Peer">
+                                    <param id="0" name="Instance variable">peerid</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">mp.MyID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="405923909876306" type="Marker">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="571210242226127">
                     <conditions>

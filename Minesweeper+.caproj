@@ -106,6 +106,7 @@
                 <type>Peer</type>
                 <type>Sprite</type>
                 <type>PlayerName</type>
+                <type>Marker</type>
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995736430967114" speed="5">
@@ -149,6 +150,7 @@
                 <type>Peer</type>
                 <type>Sprite</type>
                 <type>PlayerName</type>
+                <type>Marker</type>
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="360243319192397" speed="5">
@@ -202,6 +204,7 @@
                 <type>Peer</type>
                 <type>Sprite</type>
                 <type>PlayerName</type>
+                <type>Marker</type>
             </container>
         </object-type>
         <object-type name="mp" sid="287158401978729">
@@ -290,8 +293,14 @@
             <plugin id="NinePatch" />
             <texture />
         </object-type>
-        <object-type name="Player" sid="769619756001324">
+        <object-type name="Marker" sid="769619756001324">
             <plugin id="Sprite" />
+            <container>
+                <type>Peer</type>
+                <type>Sprite</type>
+                <type>PlayerName</type>
+                <type>Marker</type>
+            </container>
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="530314375219260" speed="5">
                     <frame duration="1" hotspotX="0.6" hotspotY="0.6" />
