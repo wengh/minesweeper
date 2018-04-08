@@ -18,6 +18,7 @@
         <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
@@ -284,6 +285,19 @@
         </object-type>
         <object-type global="1" name="5x5" sid="893211934777315">
             <plugin id="Arr" />
+        </object-type>
+        <object-type name="Minimap" sid="407178835292726">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
+        <object-type name="Player" sid="769619756001324">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="530314375219260" speed="5">
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.6" />
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.6" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
