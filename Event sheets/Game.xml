@@ -10,7 +10,7 @@
         <variable constant="0" name="multiplayer" sid="459188988239410" static="0" type="number">0</variable>
         <variable comment="Localization" constant="0" name="loc" sid="511140617443556" static="0" type="number">0</variable>
         <variable comment="Player name" constant="0" name="name" sid="954616974083296" static="0" type="text">Player</variable>
-        <variable comment="Number of mines" constant="0" name="count" sid="375844619915822" static="0" type="number">2500</variable>
+        <variable comment="Number of mines" constant="0" name="count" sid="375844619915822" static="0" type="number">2000</variable>
         <variable constant="0" name="width" sid="605527463054360" static="0" type="number">0</variable>
         <variable constant="0" name="height" sid="328010350763564" static="0" type="number">0</variable>
         <variable constant="0" name="x" sid="315770356282180" static="0" type="number">0</variable>
@@ -288,6 +288,52 @@
                                 <action id="-9" name="Set value" sid="909324754285779" type="System">
                                     <param id="0" name="Variable">syncQueued</param>
                                     <param id="1" name="Value">setbit(syncQueued, 1, 1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="132256725996534">
+                    <conditions>
+                        <condition id="0" name="On function" sid="125980737565077" type="f">
+                            <param id="0" name="Name">&quot;ClearSpawn&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="503460380328603" type="System">
+                            <param id="0" name="Variable">x2</param>
+                            <param id="1" name="Value">f.Param(0)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="579501868168775" type="System">
+                            <param id="0" name="Variable">y2</param>
+                            <param id="1" name="Value">F.Param(1)</param>
+                        </action>
+                        <action id="2" name="Erase tile range" sid="463397630197093" type="Cover">
+                            <param id="0" name="Tile X">x2 - 2</param>
+                            <param id="1" name="Tile Y">y2 - 2</param>
+                            <param id="2" name="Width">5</param>
+                            <param id="3" name="Height">5</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="407903211048619">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="118250957845101" type="5x5">
+                                    <param id="0" name="Axes">1</param>
+                                </condition>
+                                <condition id="0" name="Compare tile at" sid="169897245568808" type="Base">
+                                    <param id="0" name="Tile X">x2 + 5x5.CurX - 2</param>
+                                    <param id="1" name="Tile Y">y2 + 5x5.CurY - 2</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Tile">MINE</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set tile" sid="405523785502969" type="Base">
+                                    <param id="0" name="Tile X">x2 + 5x5.CurX - 2</param>
+                                    <param id="1" name="Tile Y">y2 + 5x5.CurY - 2</param>
+                                    <param id="2" name="Tile">TOGGLED_MINE</param>
+                                    <param id="3" name="State">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1697,12 +1743,6 @@
                                     <param id="0" name="Variable">y</param>
                                     <param id="1" name="Value">Base.PositionToTileY(Peer.Y)</param>
                                 </action>
-                                <action id="2" name="Erase tile range" sid="104047655151183" type="Cover">
-                                    <param id="0" name="Tile X">x - 2</param>
-                                    <param id="1" name="Tile Y">y - 2</param>
-                                    <param id="2" name="Width">5</param>
-                                    <param id="3" name="Height">5</param>
-                                </action>
                                 <action id="2" name="Set CSS style" sid="538383185283951" type="HealthBar">
                                     <param id="0" name="Property name">&quot;color&quot;</param>
                                     <param id="1" name="Value">&quot;red&quot;</param>
@@ -1802,6 +1842,15 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="600144520942073">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="277513574986375" type="f">
+                                            <param id="0" name="Name">&quot;ClearSpawn&quot;</param>
+                                            <param id="1" name="Parameter {n}">x{###}y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="215073045640884">
@@ -1853,11 +1902,9 @@
                                     <param id="0" name="Variable">y</param>
                                     <param id="1" name="Value">Base.PositionToTileY(Peer.Y)</param>
                                 </action>
-                                <action id="2" name="Erase tile range" sid="918992526701056" type="Cover">
-                                    <param id="0" name="Tile X">x - 2</param>
-                                    <param id="1" name="Tile Y">y - 2</param>
-                                    <param id="2" name="Width">5</param>
-                                    <param id="3" name="Height">5</param>
+                                <action id="0" name="Call function" sid="315566236999162" type="f">
+                                    <param id="0" name="Name">&quot;ClearSpawn&quot;</param>
+                                    <param id="1" name="Parameter {n}">x{###}y</param>
                                 </action>
                                 <action id="0" name="Call function" sid="353065404740799" type="f">
                                     <param id="0" name="Name">&quot;SyncTiles&quot;</param>

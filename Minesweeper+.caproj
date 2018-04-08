@@ -282,6 +282,9 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\whyha\Downloads\Heart.png" />
         </object-type>
+        <object-type global="1" name="5x5" sid="893211934777315">
+            <plugin id="Arr" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
