@@ -7,7 +7,14 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="914626192145726" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action behavior="Fade" id="3" name="Set wait time" sid="263119305514018" type="Message">
+                    <param id="0" name="Wait time">Infinity</param>
+                </action>
+                <action id="0" name="Set text" sid="932292124352270" type="Message">
+                    <param id="0" name="Text">projectversion</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="894839298120231">
                     <conditions>

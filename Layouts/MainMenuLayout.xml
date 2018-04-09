@@ -45,7 +45,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>76</x>
-                        <y>38</y>
+                        <y>35</y>
                         <z>0</z>
                         <width>451</width>
                         <height>87</height>
@@ -132,7 +132,7 @@
                 </instance>
                 <instance type="Message" uid="25">
                     <properties>
-                        <text></text>
+                        <text>1.0.0</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Rockwell,-21,400,0</font>
                         <color>0,0,0</color>
@@ -157,7 +157,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>25</x>
-                        <y>27</y>
+                        <y>15</y>
                         <z>0</z>
                         <width>553</width>
                         <height>26</height>
