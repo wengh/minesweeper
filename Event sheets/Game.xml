@@ -937,9 +937,9 @@
                         <condition id="-1" name="Every tick" sid="367059362217033" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="212086484387767" type="Marker">
-                            <param id="0" name="X">Minimap.X - 80 + Base.PositionToTileX(Peer.X)</param>
-                            <param id="1" name="Y">Minimap.Y - 60 + Base.PositionToTileY(Peer.Y)</param>
+                        <action id="-3" name="Set position" sid="763828108229017" type="Marker">
+                            <param id="0" name="X">Minimap.X + Base.PositionToTileX(Peer.X)</param>
+                            <param id="1" name="Y">Minimap.Y + Base.PositionToTileY(Peer.Y)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1731,6 +1731,9 @@
                             </conditions>
                             <actions>
                                 <action id="4" name="Load" sid="119051022270584" type="Cover">
+                                    <param id="0" name="JSON">mp.Message</param>
+                                </action>
+                                <action id="4" name="Load" sid="882923684636226" type="Minimap">
                                     <param id="0" name="JSON">mp.Message</param>
                                 </action>
                             </actions>
@@ -2680,6 +2683,7 @@
                                 </action>
                             </actions>
                             <sub-events>
+                                <variable constant="0" name="msg" sid="946596646963309" static="0" type="text"></variable>
                                 <event-block sid="134773964538501">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="234592136554143" type="System">
@@ -2710,11 +2714,18 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="-9" name="Set value" sid="422248778751004" type="System">
+                                            <param id="0" name="Variable">msg</param>
+                                            <param id="1" name="Value">Cover.TilesJSON</param>
+                                        </action>
                                         <action id="9" name="Broadcast message" sid="979698108880048" type="mp">
                                             <param id="0" name="From ID">&quot;&quot;</param>
                                             <param id="1" name="Tag">&quot;cover&quot;</param>
-                                            <param id="2" name="Message">Cover.TilesJSON</param>
+                                            <param id="2" name="Message">msg</param>
                                             <param id="3" name="Mode">1</param>
+                                        </action>
+                                        <action id="4" name="Load" sid="202936105757781" type="Minimap">
+                                            <param id="0" name="JSON">msg</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="491438461907843" type="System">
                                             <param id="0" name="Variable">syncQueued</param>
@@ -2851,8 +2862,8 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="275180644237618" type="Marker">
-                            <param id="0" name="X">Minimap.X - 80 + Base.PositionToTileX(Peer.X)</param>
-                            <param id="1" name="Y">Minimap.Y - 60 + Base.PositionToTileY(Peer.Y)</param>
+                            <param id="0" name="X">Minimap.X + Base.PositionToTileX(Peer.X)</param>
+                            <param id="1" name="Y">Minimap.Y + Base.PositionToTileY(Peer.Y)</param>
                         </action>
                         <action id="-26" name="Move to layer" sid="131771180060996" type="Marker">
                             <param id="0" name="Layer">3</param>

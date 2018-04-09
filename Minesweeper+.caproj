@@ -2,10 +2,10 @@
 <c2project>
     <name>Minesweeper+</name>
     <description></description>
-    <version>0.1.0.0</version>
+    <version>0.3.7</version>
     <author>Weng Haoyu</author>
-    <author-email></author-email>
-    <author-website>http://</author-website>
+    <author-email>whyharry9@gmail.com</author-email>
+    <author-website>http://wenghy.me</author-website>
     <app-id>com.wenghy.minesweeper</app-id>
     <unique-id>1wnzjo0xcadyd</unique-id>
     <saved-with-version>25200</saved-with-version>
@@ -21,6 +21,7 @@
         <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -52,7 +53,7 @@
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <use-loader-layout>0</use-loader-layout>
+    <use-loader-layout>1</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Downscaling">Medium quality</prop>
@@ -290,7 +291,7 @@
         <object-type global="1" name="5x5" sid="893211934777315">
             <plugin id="Arr" />
         </object-type>
-        <object-type name="Minimap" sid="407178835292726">
+        <object-type name="MapBg" sid="407178835292726">
             <plugin id="NinePatch" />
             <texture />
         </object-type>
@@ -311,6 +312,23 @@
         </object-type>
         <object-type name="Browser" sid="630336734133473">
             <plugin id="Browser" />
+        </object-type>
+        <object-type name="Minimap" sid="744832483484383">
+            <plugin id="Tilemap" />
+            <texture />
+            <tiles />
+        </object-type>
+        <object-type name="Coin" sid="803797098601823">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="356858133646219" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Score" sid="494120925012707">
+            <plugin id="Spritefont2" />
+            <texture />
         </object-type>
     </object-folder>
     <families />

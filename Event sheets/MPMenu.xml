@@ -156,7 +156,7 @@
                             <param id="0" name="Game">GAME_NAME</param>
                             <param id="1" name="Instance">INSTANCE_NAME</param>
                             <param id="2" name="First room">ROOM_NAME</param>
-                            <param id="3" name="Max peers">20</param>
+                            <param id="3" name="Max peers">6</param>
                             <param id="4" name="Locking">0</param>
                         </action>
                     </actions>

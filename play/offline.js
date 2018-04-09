@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1523228325,
+	"version": 1523241632,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -12,9 +12,12 @@
 		"images/explosion-sheet1.png",
 		"images/grenade-sheet0.png",
 		"images/heart.png",
-		"images/minimap.png",
+		"images/mapbg.png",
 		"images/marker-sheet0.png",
 		"images/marker-sheet1.png",
+		"images/minimap.png",
+		"images/coin-sheet0.png",
+		"images/score.png",
 		"media/explosion.m4a",
 		"media/explosion.ogg",
 		"media/click.ogg",

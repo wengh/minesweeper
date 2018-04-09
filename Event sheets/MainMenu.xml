@@ -3,6 +3,55 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MainMenu</name>
     <events>
+        <event-block sid="178065028213008">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="914626192145726" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="894839298120231">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="960026707088627" type="System">
+                            <param id="0" name="First value">left(Browser.Language, 2)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;zh&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set selection" sid="811778549085714" type="Language">
+                            <param id="0" name="Index">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="101195353670160">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="334306230054824" type="System">
+                            <param id="0" name="First value">left(Browser.Language, 2)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;fr&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set selection" sid="934788141826660" type="Language">
+                            <param id="0" name="Index">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="465809080658986">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="868211862416674" type="System">
+                            <param id="0" name="Variable">loc</param>
+                            <param id="1" name="Value">Language.SelectedIndex</param>
+                        </action>
+                        <action id="0" name="Call function" sid="921003610981585" type="f">
+                            <param id="0" name="Name">&quot;Localize&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="697373191686267">
             <conditions>
                 <condition id="0" name="On clicked" sid="813393664280232" type="StartButton" />
