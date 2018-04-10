@@ -27,7 +27,6 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
         <plugin author="Scirra" id="sliderbar" version="1">Slider bar</plugin>
     </used-plugins>
     <used-behaviors>
@@ -53,6 +52,7 @@
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>MainMenuLayout</first-layout>
     <use-loader-layout>1</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -60,12 +60,12 @@
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
-        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -188,9 +188,6 @@
         </object-type>
         <object-type name="Difficulty" sid="772471749849911">
             <plugin id="sliderbar" />
-        </object-type>
-        <object-type name="HealthBar" sid="791883699490599">
-            <plugin id="progressbar" />
         </object-type>
         <object-type name="Nickname" sid="137129886876913">
             <plugin id="TextBox" />
@@ -330,17 +327,51 @@
             <plugin id="Spritefont2" />
             <texture />
         </object-type>
+        <object-type name="HealthBg" sid="744093951322769">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
+        <object-type name="HealthBar" sid="348856695553634">
+            <plugin id="NinePatch" />
+            <instance-variables>
+                <instance-variable name="originalWidth" sid="921486715591794" type="number" />
+            </instance-variables>
+            <texture />
+        </object-type>
+        <object-type name="HelpButton" sid="810054476551806">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="WikiButton" sid="600794882640624">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="BackButton" sid="107740927645802">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="TutControl" sid="154903726024149">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="812528405783009" speed="5">
+                    <frame duration="1" hotspotX="0.695652" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.695652" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tutorial" sid="800390136972890">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>MainMenuLayout.xml</layout>
         <layout>GameLayout.xml</layout>
         <layout>MultiplayerLayout.xml</layout>
+        <layout>HelpLayout.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Game.xml</event-sheet>
         <event-sheet>MainMenu.xml</event-sheet>
         <event-sheet>MPMenu.xml</event-sheet>
+        <event-sheet>Help.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="1" />

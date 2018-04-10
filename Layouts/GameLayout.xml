@@ -294,27 +294,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="HealthBar" uid="14">
-                    <properties>
-                        <value>100</value>
-                        <maximum>100</maximum>
-                        <tooltip>Health</tooltip>
-                        <initial-visibility>Visible</initial-visibility>
-                        <id-optional></id-optional>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>200</x>
-                        <y>4</y>
-                        <z>0</z>
-                        <width>200</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                    </world>
-                </instance>
                 <instance type="Grenade" uid="28">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -522,6 +501,61 @@
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HealthBg" uid="36">
+                    <properties>
+                        <left-margin>2</left-margin>
+                        <right-margin>2</right-margin>
+                        <top-margin>2</top-margin>
+                        <bottom-margin>2</bottom-margin>
+                        <edges>Stretch</edges>
+                        <fill>Stretch</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>198</x>
+                        <y>4</y>
+                        <z>0</z>
+                        <width>204</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HealthBar" uid="37">
+                    <properties>
+                        <left-margin>0</left-margin>
+                        <right-margin>0</right-margin>
+                        <top-margin>3</top-margin>
+                        <bottom-margin>3</bottom-margin>
+                        <edges>Stretch</edges>
+                        <fill>Stretch</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <instance-variables>
+                        <originalWidth>200</originalWidth>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>200</x>
+                        <y>4</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <opacity>1</opacity>
                     </world>
                 </instance>

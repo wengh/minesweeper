@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Help</name>
+    <events>
+        <event-block sid="220861614218606">
+            <conditions>
+                <condition id="0" name="On clicked" sid="965847629539070" type="WikiButton" />
+            </conditions>
+            <actions>
+                <action id="8" name="Open URL in new window" sid="606886909793777" type="Browser">
+                    <param id="0" name="URL">&quot;http://www.minesweeper.info/wiki/Strategy&quot;</param>
+                    <param id="1" name="Tag">&quot;Wiki&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="644359665456518">
+            <conditions>
+                <condition id="0" name="On clicked" sid="959916569528212" type="BackButton" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="813754297753812" type="System">
+                    <param id="0" name="Layout">MainMenuLayout</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

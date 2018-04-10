@@ -232,9 +232,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set tooltip" sid="151245931825771" type="HealthBar">
-                                    <param id="0" name="Tooltip">&quot;Health&quot;</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="727814063317855" type="System">
                                     <param id="0" name="Variable">deathMessage</param>
                                     <param id="1" name="Value">&quot;You&apos;re died. Please reload this page to play again.&quot;</param>
@@ -250,9 +247,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set tooltip" sid="804286062700143" type="HealthBar">
-                                    <param id="0" name="Tooltip">&quot;Dégâts&quot;</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="623168114573135" type="System">
                                     <param id="0" name="Variable">deathMessage</param>
                                     <param id="1" name="Value">&quot;Vous êtes mort. Pour rejoindre, veuillez rechargez cette page.&quot;</param>
@@ -268,9 +262,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set tooltip" sid="905599712193949" type="HealthBar">
-                                    <param id="0" name="Tooltip">&quot;血量&quot;</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="233342902659399" type="System">
                                     <param id="0" name="Variable">deathMessage</param>
                                     <param id="1" name="Value">&quot;你死了，请重新加载此网页以重新开始。&quot;</param>
@@ -415,10 +406,6 @@
                             <param id="1" name="Tile Y">y - 1</param>
                             <param id="2" name="Width">3</param>
                             <param id="3" name="Height">3</param>
-                        </action>
-                        <action id="2" name="Set CSS style" sid="782922606772338" type="HealthBar">
-                            <param id="0" name="Property name">&quot;color&quot;</param>
-                            <param id="1" name="Value">&quot;red&quot;</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="988514783887024" type="PlayerName">
                             <param id="0" name="Pin to">Peer</param>
@@ -1786,10 +1773,6 @@
                                     <param id="0" name="Variable">y</param>
                                     <param id="1" name="Value">Base.PositionToTileY(Peer.Y)</param>
                                 </action>
-                                <action id="2" name="Set CSS style" sid="538383185283951" type="HealthBar">
-                                    <param id="0" name="Property name">&quot;color&quot;</param>
-                                    <param id="1" name="Value">&quot;red&quot;</param>
-                                </action>
                                 <action id="26" name="Set listener object" sid="888007518660305" type="Audio">
                                     <param id="0" name="Object">Peer</param>
                                 </action>
@@ -2799,9 +2782,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Add to" sid="294132483452717" type="Peer">
+                                <action id="-10" name="Set value" sid="294132483452717" type="Peer">
                                     <param id="0" name="Instance variable">health</param>
-                                    <param id="1" name="Value">3</param>
+                                    <param id="1" name="Value">min(Peer.health + 3, 100)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2828,8 +2811,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="3" name="Set progress" sid="250721151161361" type="HealthBar">
-                            <param id="0" name="Value">Peer.health</param>
+                        <action id="-5" name="Set width" sid="467793542721034" type="HealthBar">
+                            <param id="0" name="Width">Peer.health / 100 * HealthBar.originalWidth</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -2945,10 +2928,6 @@
                             <param id="0" name="Variable">height</param>
                             <param id="1" name="Value">Cover.PositionToTileY(Cover.Height)</param>
                         </action>
-                        <action id="2" name="Set CSS style" sid="664304173194318" type="HealthBar">
-                            <param id="0" name="Property name">&quot;color&quot;</param>
-                            <param id="1" name="Value">&quot;red&quot;</param>
-                        </action>
                         <action id="11" name="Sync object" sid="859159281846837" type="mp">
                             <param id="0" name="Object">Grenade</param>
                             <param id="1" name="Data">1</param>
@@ -3007,6 +2986,17 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="962926850635889" type="Explosion" />
+            </actions>
+        </event-block>
+        <event-block sid="109397287274613">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="354895599584928" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="372579667498787" type="HealthBar">
+                    <param id="0" name="Instance variable">originalWidth</param>
+                    <param id="1" name="Value">HealthBar.Width</param>
+                </action>
             </actions>
         </event-block>
     </events>
