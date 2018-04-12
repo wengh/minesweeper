@@ -2213,6 +2213,11 @@
                                             <param id="1" name="Comparison">3</param>
                                             <param id="2" name="Value">0</param>
                                         </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="575286044021981" type="Peer">
+                                            <param id="0" name="Instance variable">score</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-3" name="Create object" sid="118226739590569" type="System">
@@ -2243,6 +2248,10 @@
                                             <param id="0" name="Instance variable">cooldown</param>
                                             <param id="1" name="Value">2</param>
                                         </action>
+                                        <action id="-12" name="Subtract from" sid="977000631125140" type="Peer">
+                                            <param id="0" name="Instance variable">score</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <comment>Clique de souris</comment>
@@ -2256,6 +2265,7 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
+                                        <variable constant="0" name="hiddenTiles" sid="164061175647678" static="0" type="number">0</variable>
                                         <event-block sid="218466332265551">
                                             <conditions>
                                                 <condition id="-8" name="Is boolean instance variable set" sid="417307214244520" type="Peer">
@@ -2281,6 +2291,25 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
+                                                <event-block sid="215235678530577">
+                                                    <conditions>
+                                                        <condition id="3" name="For each element" sid="474270659547468" type="3x3">
+                                                            <param id="0" name="Axes">1</param>
+                                                        </condition>
+                                                        <condition id="0" name="Compare tile at" sid="868760884830037" type="Cover">
+                                                            <param id="0" name="Tile X">x + 3x3.CurX - 1</param>
+                                                            <param id="1" name="Tile Y">y + 3x3.CurY - 1</param>
+                                                            <param id="2" name="Comparison">0</param>
+                                                            <param id="3" name="Tile">-1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="399942044992598" type="System">
+                                                            <param id="0" name="Variable">hiddenTiles</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
                                                 <comment>Reveler la case</comment>
                                                 <event-block sid="848082963784013">
                                                     <conditions>
@@ -2537,6 +2566,34 @@
                                                             </sub-events>
                                                         </event-block>
                                                     </sub-events>
+                                                </event-block>
+                                                <event-block sid="605045919844242">
+                                                    <conditions>
+                                                        <condition id="3" name="For each element" sid="554456976728653" type="3x3">
+                                                            <param id="0" name="Axes">1</param>
+                                                        </condition>
+                                                        <condition id="0" name="Compare tile at" sid="477854619274889" type="Cover">
+                                                            <param id="0" name="Tile X">x + 3x3.CurX - 1</param>
+                                                            <param id="1" name="Tile Y">y + 3x3.CurY - 1</param>
+                                                            <param id="2" name="Comparison">0</param>
+                                                            <param id="3" name="Tile">-1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-11" name="Subtract from" sid="518033143808468" type="System">
+                                                            <param id="0" name="Variable">hiddenTiles</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="815052215886786">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-11" name="Add to" sid="226743407732525" type="Peer">
+                                                            <param id="0" name="Instance variable">score</param>
+                                                            <param id="1" name="Value">hiddenTiles</param>
+                                                        </action>
+                                                    </actions>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -2840,6 +2897,41 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="463330049047943">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="605494363479860" type="Peer">
+                            <param id="0" name="Instance variable">peerid</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">mp.MyID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="178129365989991" type="Score">
+                            <param id="0" name="Text">Peer.score</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="847080673803196">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="479553170112899" type="Peer">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="298781392417824" type="Peer">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">100</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="613343168978889" type="Peer">
+                                    <param id="0" name="Instance variable">lives</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="661627012293730">
                     <conditions>
                         <condition id="-11" name="For Each" sid="377943562340130" type="System">
@@ -2918,6 +3010,13 @@
                             <param id="2" name="Precision">3</param>
                             <param id="3" name="Interpolation">0</param>
                             <param id="4" name="Client value tag">&quot;inputs&quot;</param>
+                        </action>
+                        <action id="12" name="Sync instance variable" sid="219228279668578" type="mp">
+                            <param id="0" name="Object">Peer</param>
+                            <param id="1" name="Instance variable">Peer|score</param>
+                            <param id="2" name="Precision">3</param>
+                            <param id="3" name="Interpolation">0</param>
+                            <param id="4" name="Client value tag">&quot;&quot;</param>
                         </action>
                         <action id="0" name="Call function" sid="168991365302000" type="f">
                             <param id="0" name="Name">&quot;Localize&quot;</param>
