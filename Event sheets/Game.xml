@@ -1674,6 +1674,9 @@
                                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="898738830961739" type="Grenade">
                                     <param id="0" name="Angle">Self.direction</param>
                                 </action>
+                                <action id="-26" name="Move to layer" sid="999041710369354" type="Grenade">
+                                    <param id="0" name="Layer">2</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="295061134466231">
@@ -2932,7 +2935,7 @@
                             <param id="0" name="Object">Grenade</param>
                             <param id="1" name="Data">1</param>
                             <param id="2" name="Precision">1</param>
-                            <param id="3" name="Bandwidth">1</param>
+                            <param id="3" name="Bandwidth">0</param>
                         </action>
                         <action id="12" name="Sync instance variable" sid="738146692368087" type="mp">
                             <param id="0" name="Object">Grenade</param>
