@@ -15,6 +15,7 @@
         <variable constant="0" name="height" sid="328010350763564" static="0" type="number">0</variable>
         <variable constant="0" name="x" sid="315770356282180" static="0" type="number">0</variable>
         <variable constant="0" name="y" sid="783073664343865" static="0" type="number">0</variable>
+        <variable constant="0" name="currency" sid="486950287135627" static="0" type="text">D</variable>
         <variable constant="0" name="deathMessage" sid="544259066473916" static="0" type="text">You&apos;re died. Please refresh this page to play again.</variable>
         <variable constant="0" name="syncQueued" sid="607399681307316" static="0" type="number">0</variable>
         <variable constant="0" name="syncCooldown" sid="838543197546370" static="0" type="number">0</variable>
@@ -236,6 +237,10 @@
                                     <param id="0" name="Variable">deathMessage</param>
                                     <param id="1" name="Value">&quot;You&apos;re died. Please reload this page to play again.&quot;</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="588030581874261" type="System">
+                                    <param id="0" name="Variable">currency</param>
+                                    <param id="1" name="Value">&quot;D&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="738416102078384">
@@ -251,6 +256,10 @@
                                     <param id="0" name="Variable">deathMessage</param>
                                     <param id="1" name="Value">&quot;Vous êtes mort. Pour rejoindre, veuillez rechargez cette page.&quot;</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="165418268591110" type="System">
+                                    <param id="0" name="Variable">currency</param>
+                                    <param id="1" name="Value">&quot;E&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="923960049269213">
@@ -265,6 +274,10 @@
                                 <action id="-9" name="Set value" sid="233342902659399" type="System">
                                     <param id="0" name="Variable">deathMessage</param>
                                     <param id="1" name="Value">&quot;你死了，请重新加载此网页以重新开始。&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="102838794916371" type="System">
+                                    <param id="0" name="Variable">currency</param>
+                                    <param id="1" name="Value">&quot;Y&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2852,9 +2865,10 @@
                 </event-group>
                 <comment>Initialisation multi-joueur</comment>
                 <variable constant="0" name="lastHealth" sid="555419483493397" static="1" type="number">100</variable>
-                <event-block sid="847921069886678">
+                <event-block sid="755200099216058">
                     <conditions>
-                        <condition id="14" name="On kicked" sid="591851863031029" type="mp" />
+                        <condition id="9" inverted="1" name="Is in room" sid="433836772175726" type="mp" />
+                        <condition id="-4" name="Trigger once while true" sid="539804229053709" type="System" />
                     </conditions>
                     <actions>
                         <action id="0" name="Alert" sid="209324674804834" type="Browser">
@@ -2874,6 +2888,9 @@
                         <action id="-5" name="Set width" sid="467793542721034" type="HealthBar">
                             <param id="0" name="Width">Peer.health / 100 * HealthBar.originalWidth</param>
                         </action>
+                        <action id="0" name="Set text" sid="178129365989991" type="Score">
+                            <param id="0" name="Text">Peer.score &amp; currency</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="547002168097007">
@@ -2890,41 +2907,6 @@
                                     <param id="1" name="Value">100</param>
                                 </action>
                                 <action id="-12" name="Subtract from" sid="483935250503632" type="Peer">
-                                    <param id="0" name="Instance variable">lives</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="463330049047943">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="605494363479860" type="Peer">
-                            <param id="0" name="Instance variable">peerid</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">mp.MyID</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="178129365989991" type="Score">
-                            <param id="0" name="Text">Peer.score</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="847080673803196">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="479553170112899" type="Peer">
-                                    <param id="0" name="Instance variable">health</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="298781392417824" type="Peer">
-                                    <param id="0" name="Instance variable">health</param>
-                                    <param id="1" name="Value">100</param>
-                                </action>
-                                <action id="-12" name="Subtract from" sid="613343168978889" type="Peer">
                                     <param id="0" name="Instance variable">lives</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -3011,10 +2993,10 @@
                             <param id="3" name="Interpolation">0</param>
                             <param id="4" name="Client value tag">&quot;inputs&quot;</param>
                         </action>
-                        <action id="12" name="Sync instance variable" sid="219228279668578" type="mp">
+                        <action id="12" name="Sync instance variable" sid="870434087235870" type="mp">
                             <param id="0" name="Object">Peer</param>
                             <param id="1" name="Instance variable">Peer|score</param>
-                            <param id="2" name="Precision">3</param>
+                            <param id="2" name="Precision">2</param>
                             <param id="3" name="Interpolation">0</param>
                             <param id="4" name="Client value tag">&quot;&quot;</param>
                         </action>

@@ -504,7 +504,7 @@
                     <properties>
                         <character-width>5</character-width>
                         <character-height>8</character-height>
-                        <character-set>0123456789</character-set>
+                        <character-set>0123456789DYE</character-set>
                         <text>0</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
