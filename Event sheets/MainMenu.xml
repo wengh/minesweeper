@@ -240,5 +240,13 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="496696299762689">
+            <conditions>
+                <condition id="20" name="On update ready" sid="752560049245503" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="9" name="Reload" sid="586761825294660" type="Browser" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
