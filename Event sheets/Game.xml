@@ -2313,7 +2313,7 @@
                                                             <param id="0" name="Tile X">x + 3x3.CurX - 1</param>
                                                             <param id="1" name="Tile Y">y + 3x3.CurY - 1</param>
                                                             <param id="2" name="Comparison">0</param>
-                                                            <param id="3" name="Tile">-1</param>
+                                                            <param id="3" name="Tile">COVERED</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
@@ -2589,7 +2589,7 @@
                                                             <param id="0" name="Tile X">x + 3x3.CurX - 1</param>
                                                             <param id="1" name="Tile Y">y + 3x3.CurY - 1</param>
                                                             <param id="2" name="Comparison">0</param>
-                                                            <param id="3" name="Tile">-1</param>
+                                                            <param id="3" name="Tile">COVERED</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
