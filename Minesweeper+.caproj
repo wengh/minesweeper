@@ -2,7 +2,7 @@
 <c2project>
     <name>Minesweeper+</name>
     <description></description>
-    <version>0.4.12</version>
+    <version>0.5.1</version>
     <author>Weng Haoyu</author>
     <author-email>whyharry9@gmail.com</author-email>
     <author-website>http://wenghy.me</author-website>
@@ -42,7 +42,9 @@
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="alphaclamp">Alpha clamp</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -88,6 +90,11 @@
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>
+            <effects>
+                <effect-type name="AlphaClamp">
+                    <effect id="alphaclamp" />
+                </effect-type>
+            </effects>
             <texture original-source="C:\Users\whyha\Downloads\minesweeper.png" />
             <tiles />
         </object-type>

@@ -2889,7 +2889,7 @@
                             <param id="0" name="Width">Peer.health / 100 * HealthBar.originalWidth</param>
                         </action>
                         <action id="0" name="Set text" sid="178129365989991" type="Score">
-                            <param id="0" name="Text">Peer.score &amp; currency</param>
+                            <param id="0" name="Text">Peer.score</param>
                         </action>
                     </actions>
                     <sub-events>

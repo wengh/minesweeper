@@ -17,6 +17,16 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="479765667597712">
+            <conditions>
+                <condition id="0" name="On clicked" sid="400480296931343" type="BackButton" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="616939290203406" type="System">
+                    <param id="0" name="Layout">MainMenuLayout</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="890359425647017">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="536551174787600" type="System" />
