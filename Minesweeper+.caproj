@@ -65,7 +65,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -350,9 +350,13 @@
         <object-type name="TutControl" sid="154903726024149">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="812528405783009" speed="5">
-                    <frame duration="1" hotspotX="0.695652" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.695652" hotspotY="0.5" />
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="812528405783009" speed="2">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="2" loop="1" name="Right" pingpong="0" repeatcount="1" repeatto="0" sid="739531154996402" speed="2">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
             </animation-folder>
         </object-type>
