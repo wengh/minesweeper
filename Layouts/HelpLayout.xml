@@ -4,8 +4,8 @@
     <sid>637627894864717</sid>
     <event-sheet>Help</event-sheet>
     <size>
-        <width>1708</width>
-        <height>960</height>
+        <width>2000</width>
+        <height>1500</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -450,7 +450,7 @@
                 </instance>
                 <instance type="Tutorial" uid="52">
                     <properties>
-                        <text>Minesweeping</text>
+                        <text>Mines</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Rockwell,-16,400,0</font>
                         <color>0,0,0</color>
@@ -463,10 +463,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>299</x>
+                        <x>298</x>
                         <y>91</y>
                         <z>0</z>
-                        <width>119</width>
+                        <width>83</width>
                         <height>27</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
