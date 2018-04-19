@@ -2229,7 +2229,7 @@
                                         <condition id="-7" name="Compare instance variable" sid="575286044021981" type="Peer">
                                             <param id="0" name="Instance variable">score</param>
                                             <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">3</param>
+                                            <param id="2" name="Value">5</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -2263,7 +2263,7 @@
                                         </action>
                                         <action id="-12" name="Subtract from" sid="977000631125140" type="Peer">
                                             <param id="0" name="Instance variable">score</param>
-                                            <param id="1" name="Value">3</param>
+                                            <param id="1" name="Value">5</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -3016,7 +3016,7 @@
                             <param id="0" name="Object">Grenade</param>
                             <param id="1" name="Data">1</param>
                             <param id="2" name="Precision">1</param>
-                            <param id="3" name="Bandwidth">0</param>
+                            <param id="3" name="Bandwidth">1</param>
                         </action>
                         <action id="12" name="Sync instance variable" sid="738146692368087" type="mp">
                             <param id="0" name="Object">Grenade</param>

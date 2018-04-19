@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1524148058,
+	"version": 1524161901,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -22,6 +22,7 @@
 		"images/healthbar.png",
 		"images/tutcontrol-sheet0.png",
 		"images/panel.png",
+		"images/parachute-sheet0.png",
 		"media/explosion.m4a",
 		"media/explosion.ogg",
 		"media/click.ogg",

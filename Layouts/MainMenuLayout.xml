@@ -52,7 +52,7 @@
                             <parameters>
                                 <lower-clamp>0</lower-clamp>
                                 <threshold>0.5</threshold>
-                                <upper-clamp>0.5</upper-clamp>
+                                <upper-clamp>0.4</upper-clamp>
                             </parameters>
                         </effect-instance>
                     </effect-instances>

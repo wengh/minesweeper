@@ -248,5 +248,15 @@
                 <action id="9" name="Reload" sid="586761825294660" type="Browser" />
             </actions>
         </event-block>
+        <event-block sid="586525338552151">
+            <conditions>
+                <condition id="19" name="On update found" sid="409872323514847" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="1" name="Append text" sid="818362250858591" type="Message">
+                    <param id="0" name="Text">&quot; - Downloading update&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

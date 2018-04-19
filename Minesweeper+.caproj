@@ -2,7 +2,7 @@
 <c2project>
     <name>Minesweeper+</name>
     <description></description>
-    <version>0.6.1</version>
+    <version>0.6.2</version>
     <author>Weng Haoyu</author>
     <author-email>whyharry9@gmail.com</author-email>
     <author-website>http://wenghy.me</author-website>
@@ -44,6 +44,7 @@
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="alphaclamp">Alpha clamp</effect>
+        <effect author="Viktor Korsun" id="waterbg">Water background</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -169,6 +170,11 @@
         </object-type>
         <object-type name="Explosion" sid="883382399468317">
             <plugin id="Sprite" />
+            <effects>
+                <effect-type name="WaterBackground">
+                    <effect id="waterbg" />
+                </effect-type>
+            </effects>
             <animation-folder>
                 <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="219681916363025" speed="10">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Documents\SimpleRockets\Explosion.1.png" />
@@ -373,6 +379,14 @@
         <object-type name="Panel" sid="672305823420740">
             <plugin id="NinePatch" />
             <texture />
+        </object-type>
+        <object-type name="Parachute" sid="273114201805625">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="159123711122965" speed="5">
+                    <frame duration="1" hotspotX="0.52" hotspotY="1" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
