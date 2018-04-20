@@ -2,7 +2,7 @@
 <c2project>
     <name>Minesweeper+</name>
     <description></description>
-    <version>0.6.2</version>
+    <version>0.6.3</version>
     <author>Weng Haoyu</author>
     <author-email>whyharry9@gmail.com</author-email>
     <author-website>http://wenghy.me</author-website>
@@ -382,11 +382,22 @@
         </object-type>
         <object-type name="Parachute" sid="273114201805625">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="460353627924278">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="159123711122965" speed="5">
                     <frame duration="1" hotspotX="0.52" hotspotY="1" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="LeaderName" sid="380803408013010">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="LeaderScore" sid="601793116345349">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />

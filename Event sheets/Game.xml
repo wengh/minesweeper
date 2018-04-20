@@ -273,7 +273,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="233342902659399" type="System">
                                     <param id="0" name="Variable">deathMessage</param>
-                                    <param id="1" name="Value">&quot;你死了，请重新加载此网页以重新开始。&quot;</param>
+                                    <param id="1" name="Value">&quot;你死了，请刷新此网页以重新开始。&quot;</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="102838794916371" type="System">
                                     <param id="0" name="Variable">currency</param>
@@ -955,9 +955,13 @@
                                 <condition id="-18" name="On created" sid="703938028249351" type="Peer" />
                             </conditions>
                             <actions>
-                                <action id="-11" name="Add to" sid="411391252559051" type="Peer">
+                                <action id="-10" name="Set value" sid="411391252559051" type="Peer">
                                     <param id="0" name="Instance variable">peerid</param>
                                     <param id="1" name="Value">mp.PeerID</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="889140782064371" type="Peer">
+                                    <param id="0" name="Instance variable">alias</param>
+                                    <param id="1" name="Value">mp.PeerAlias</param>
                                 </action>
                                 <action id="13" name="Associate object with peer" sid="521588973377809" type="mp">
                                     <param id="0" name="Object">Peer</param>
@@ -1909,6 +1913,10 @@
                                 <action id="-10" name="Set value" sid="764077531855906" type="Peer">
                                     <param id="0" name="Instance variable">peerid</param>
                                     <param id="1" name="Value">mp.PeerID</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="992105413988517" type="Peer">
+                                    <param id="0" name="Instance variable">alias</param>
+                                    <param id="1" name="Value">mp.PeerAlias</param>
                                 </action>
                                 <action id="13" name="Associate object with peer" sid="334642159830484" type="mp">
                                     <param id="0" name="Object">Peer</param>
@@ -2946,6 +2954,40 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="750671308739710">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="580776055719560" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="646144380846330" type="LeaderName">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="760062542106138" type="LeaderScore">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="766935398031477">
+                            <conditions>
+                                <condition id="-24" name="For Each (ordered)" sid="259300647951397" type="System">
+                                    <param id="0" name="Object">Peer</param>
+                                    <param id="1" name="Expression">Peer.score</param>
+                                    <param id="2" name="Order">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="302701501870497" type="LeaderName">
+                                    <param id="0" name="Text">Peer.alias &amp; newline</param>
+                                </action>
+                                <action id="1" name="Append text" sid="833378830342238" type="LeaderScore">
+                                    <param id="0" name="Text">Peer.score &amp; newline</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="571210242226127">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="579849607432416" type="System" />
@@ -3039,6 +3081,10 @@
                                 <action id="-10" name="Set value" sid="639382890313834" type="Peer">
                                     <param id="0" name="Instance variable">peerid</param>
                                     <param id="1" name="Value">mp.MyID</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="380945275075103" type="Peer">
+                                    <param id="0" name="Instance variable">alias</param>
+                                    <param id="1" name="Value">mp.MyAlias</param>
                                 </action>
                                 <action id="13" name="Associate object with peer" sid="836725708556886" type="mp">
                                     <param id="0" name="Object">Peer</param>
