@@ -628,7 +628,7 @@
                         <hotspotX>0.519999981</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.75</opacity>
                     </world>
                 </instance>
             </instances>
