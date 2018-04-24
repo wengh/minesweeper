@@ -235,7 +235,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="727814063317855" type="System">
                                     <param id="0" name="Variable">deathMessage</param>
-                                    <param id="1" name="Value">&quot;You&apos;re died. Please reload this page to play again.&quot;</param>
+                                    <param id="1" name="Value">&quot;You died. Please reload this page to play again.&quot;</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="588030581874261" type="System">
                                     <param id="0" name="Variable">currency</param>
@@ -437,6 +437,10 @@
                             <param id="0" name="Name">&quot;Localize&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="-9" name="Destroy" sid="450947130406102" type="HealthBg" />
+                        <action id="-9" name="Destroy" sid="916146957877541" type="HealthBar" />
+                        <action id="-9" name="Destroy" sid="429421918586498" type="Coin" />
+                        <action id="-9" name="Destroy" sid="852571862379685" type="Score" />
                     </actions>
                     <sub-events>
                         <comment>Génération de terrain</comment>
@@ -984,7 +988,23 @@
                                 </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="398434007589992" type="PlayerName">
                                     <param id="0" name="Pin to">Peer</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="174356244479284" type="Peer">
+                                    <param id="0" name="Object">Parachute</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="913135023317591" type="Parachute">
+                                    <param id="0" name="Pin to">Peer</param>
                                     <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="193038044733153" type="Peer">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="132657673089469" type="Peer">
+                                    <param id="0" name="Instance variable">hasParachute</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -1020,6 +1040,55 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="608091545951274">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="468173323169816" type="Peer">
+                                    <param id="0" name="Instance variable">parachute</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition behavior="8Direction" id="1" name="Compare speed" sid="774001530886470" type="Peer">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="Speed">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-20" name="Rotate toward angle" sid="997340080034481" type="Peer">
+                                    <param id="0" name="Degrees">10</param>
+                                    <param id="1" name="Angle">Peer.8Direction.MovingAngle + 90</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="716604322061142">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="397318622142677" type="Peer">
+                                    <param id="0" name="Instance variable">hasParachute</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="188736229631001" type="Peer">
+                                    <param id="0" name="Instance variable">parachute</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-15" name="Pick nearest/furthest" sid="239520913472326" type="Parachute">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="X">Peer.X</param>
+                                    <param id="2" name="Y">Peer.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="785313548664097" type="Peer">
+                                    <param id="0" name="Instance variable">hasParachute</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="826369316845840" type="Parachute" />
+                                <action id="11" name="Set collisions enabled" sid="662012415541418" type="Peer">
+                                    <param id="0" name="Collisions">1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="533892141113454" type="Peer">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="761486240086895">
                             <conditions>
@@ -1796,6 +1865,10 @@
                                 <action id="26" name="Set listener object" sid="888007518660305" type="Audio">
                                     <param id="0" name="Object">Peer</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="898507811645298" type="Peer">
+                                    <param id="0" name="Instance variable">parachute</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <comment>Génération de terrain</comment>
@@ -1910,6 +1983,10 @@
                                     <param id="2" name="X">random(0, LayoutWidth)</param>
                                     <param id="3" name="Y">random(0, LayoutHeight)</param>
                                 </action>
+                                <action id="0" name="Call function" sid="353065404740799" type="f">
+                                    <param id="0" name="Name">&quot;SyncTiles&quot;</param>
+                                    <param id="1" name="Parameter {n}">3</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="764077531855906" type="Peer">
                                     <param id="0" name="Instance variable">peerid</param>
                                     <param id="1" name="Value">mp.PeerID</param>
@@ -1944,6 +2021,86 @@
                                     <param id="0" name="Pin to">Peer</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
+                                <action id="0" name="Spawn another object" sid="382452101593673" type="Peer">
+                                    <param id="0" name="Object">Parachute</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="119893333476091" type="Parachute">
+                                    <param id="0" name="Pin to">Peer</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="11" name="Set collisions enabled" sid="270547828521825" type="Peer">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="516545444972129" type="Peer">
+                                    <param id="0" name="Instance variable">hasParachute</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="554328700746729">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="272056153817959" type="Peer">
+                                    <param id="0" name="Instance variable">parachute</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition behavior="8Direction" id="1" name="Compare speed" sid="400460257396392" type="Peer">
+                                    <param id="0" name="Comparison">1</param>
+                                    <param id="1" name="Speed">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-20" name="Rotate toward angle" sid="706578141499702" type="Peer">
+                                    <param id="0" name="Degrees">10</param>
+                                    <param id="1" name="Angle">Peer.8Direction.MovingAngle + 90</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="353596699029885">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="972289375215879" type="System">
+                                            <param id="0" name="Interval (seconds)">1.0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="576713508857381" type="Peer">
+                                            <param id="0" name="Instance variable">parachute</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="602702173273058">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="987604546550105" type="Peer">
+                                    <param id="0" name="Instance variable">hasParachute</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="773039695449975" type="Peer">
+                                    <param id="0" name="Instance variable">parachute</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-15" name="Pick nearest/furthest" sid="353591618599200" type="Parachute">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="X">Peer.X</param>
+                                    <param id="2" name="Y">Peer.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="558038427690738" type="Peer">
+                                    <param id="0" name="Instance variable">hasParachute</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="669253759276373" type="Parachute" />
+                                <action id="11" name="Set collisions enabled" sid="844613966318372" type="Peer">
+                                    <param id="0" name="Collisions">1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="150901548301925" type="Peer">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
                                 <action id="-9" name="Set value" sid="887993031272853" type="System">
                                     <param id="0" name="Variable">x</param>
                                     <param id="1" name="Value">Base.PositionToTileX(Peer.X)</param>
@@ -1956,7 +2113,7 @@
                                     <param id="0" name="Name">&quot;ClearSpawn&quot;</param>
                                     <param id="1" name="Parameter {n}">x{###}y</param>
                                 </action>
-                                <action id="0" name="Call function" sid="353065404740799" type="f">
+                                <action id="0" name="Call function" sid="459716773195147" type="f">
                                     <param id="0" name="Name">&quot;SyncTiles&quot;</param>
                                     <param id="1" name="Parameter {n}">3</param>
                                 </action>
@@ -3039,6 +3196,13 @@
                             <param id="0" name="Object">Peer</param>
                             <param id="1" name="Instance variable">Peer|score</param>
                             <param id="2" name="Precision">2</param>
+                            <param id="3" name="Interpolation">0</param>
+                            <param id="4" name="Client value tag">&quot;&quot;</param>
+                        </action>
+                        <action id="12" name="Sync instance variable" sid="389648409125418" type="mp">
+                            <param id="0" name="Object">Peer</param>
+                            <param id="1" name="Instance variable">Peer|parachute</param>
+                            <param id="2" name="Precision">3</param>
                             <param id="3" name="Interpolation">0</param>
                             <param id="4" name="Client value tag">&quot;&quot;</param>
                         </action>

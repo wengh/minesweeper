@@ -193,6 +193,8 @@
                         <firstClick>true</firstClick>
                         <score>0</score>
                         <cooldown>0</cooldown>
+                        <parachute>10</parachute>
+                        <hasParachute>false</hasParachute>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -629,7 +631,7 @@
                         <height>44</height>
                         <depth>0</depth>
                         <hotspotX>0.519999981</hotspotX>
-                        <hotspotY>1</hotspotY>
+                        <hotspotY>0.545454562</hotspotY>
                         <angle>0</angle>
                         <opacity>0.75</opacity>
                     </world>

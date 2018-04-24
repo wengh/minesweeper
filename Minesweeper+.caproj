@@ -2,7 +2,7 @@
 <c2project>
     <name>Minesweeper+</name>
     <description></description>
-    <version>0.6.3</version>
+    <version>0.6.5</version>
     <author>Weng Haoyu</author>
     <author-email>whyharry9@gmail.com</author-email>
     <author-website>http://wenghy.me</author-website>
@@ -68,7 +68,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -144,6 +144,8 @@
                 <instance-variable name="firstClick" sid="789771380846412" type="boolean" />
                 <instance-variable name="score" sid="422041959773142" type="number" />
                 <instance-variable name="cooldown" sid="484817907566216" type="number" />
+                <instance-variable name="parachute" sid="485399124306650" type="number" />
+                <instance-variable name="hasParachute" sid="132643052490525" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="463193637685411">
@@ -389,7 +391,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="159123711122965" speed="5">
-                    <frame duration="1" hotspotX="0.52" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.545455" />
                 </animation>
             </animation-folder>
         </object-type>
