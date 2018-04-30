@@ -2,7 +2,7 @@
 <c2project>
     <name>Minesweeper+</name>
     <description></description>
-    <version>0.6.5</version>
+    <version>0.6.6</version>
     <author>Weng Haoyu</author>
     <author-email>whyharry9@gmail.com</author-email>
     <author-website>http://wenghy.me</author-website>
@@ -17,6 +17,7 @@
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="List" version="1">List</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
@@ -401,6 +402,32 @@
         <object-type name="LeaderScore" sid="601793116345349">
             <plugin id="Text" />
         </object-type>
+        <object-type name="WenA" sid="773590065424484">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ParachuteProgress" sid="849082326748472">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="697589417685345">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="511598335344531" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LocalStorage" sid="423984952874309">
+            <plugin id="LocalStorage" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -440,6 +467,7 @@
             </properties>
         </global-instance>
         <global-instance type="Browser" uid="32" />
+        <global-instance type="LocalStorage" uid="63" />
     </global-instances>
     <sounds-folder>
         <file name="Explosion.m4a" />
