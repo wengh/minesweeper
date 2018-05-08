@@ -2,7 +2,7 @@
 <c2project>
     <name>Minesweeper+</name>
     <description></description>
-    <version>0.6.6</version>
+    <version>0.7.0</version>
     <author>Weng Haoyu</author>
     <author-email>whyharry9@gmail.com</author-email>
     <author-website>http://wenghy.me</author-website>
@@ -69,7 +69,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -120,15 +120,36 @@
                 <type>Marker</type>
             </container>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995736430967114" speed="5">
-                    <frame duration="1" hotspotX="0.533333" hotspotY="0.533333">
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995736430967114" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.1" y="0.1" />
-                            <point x="0.933333" y="0.1" />
-                            <point x="0.933333" y="0.933333" />
-                            <point x="0.1" y="0.933333" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
                         </collision-poly>
                     </frame>
+                    <frame duration="1" hotspotX="0.470588" hotspotY="0.470588">
+                        <collision-poly>
+                            <point x="1" y="0.117647" />
+                            <point x="1" y="1" />
+                            <point x="0.0588235" y="1" />
+                            <point x="0.0588235" y="0.117647" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.470588" hotspotY="0.529412">
+                        <collision-poly>
+                            <point x="0.117647" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.941176" />
+                            <point x="0.117647" y="0.941176" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Alt" pingpong="0" repeatcount="1" repeatto="0" sid="849334277034854" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -251,8 +272,11 @@
         <object-type name="Banner" sid="914694316277331">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="310844894369568" speed="5">
-                    <frame duration="1" hotspotX="0.533333" hotspotY="0.533333" />
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="310844894369568" speed="3">
+                    <frame duration="1" hotspotX="0.5625" hotspotY="0.363636" />
+                    <frame duration="1" hotspotX="0.571429" hotspotY="0.416667" />
+                    <frame duration="1" hotspotX="0.5625" hotspotY="0.363636" />
+                    <frame duration="1" hotspotX="0.555556" hotspotY="0.3" />
                 </animation>
             </animation-folder>
         </object-type>

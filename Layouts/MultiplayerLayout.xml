@@ -206,11 +206,11 @@
                         <x>124</x>
                         <y>244</y>
                         <z>0</z>
-                        <width>300</width>
-                        <height>300</height>
+                        <width>160</width>
+                        <height>110</height>
                         <depth>0</depth>
-                        <hotspotX>0.533333361</hotspotX>
-                        <hotspotY>0.533333361</hotspotY>
+                        <hotspotX>0.5625</hotspotX>
+                        <hotspotY>0.363636374</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

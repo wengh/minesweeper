@@ -954,7 +954,7 @@
             <sub-events>
                 <event-group description="" inactive="1" sid="925808660508785" title="Peer">
                     <sub-events>
-                        <variable constant="0" name="lastLive" sid="778036113443952" static="1" type="number">5</variable>
+                        <variable constant="0" name="lastLives" sid="778036113443952" static="1" type="number">5</variable>
                         <event-block sid="671459069560231">
                             <conditions>
                                 <condition id="-18" name="On created" sid="703938028249351" type="Peer" />
@@ -1025,7 +1025,7 @@
                                             <param id="0" name="Object">Peer</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="832538859833608" type="System">
-                                            <param id="0" name="Variable">lastLive</param>
+                                            <param id="0" name="Variable">lastLives</param>
                                             <param id="1" name="Value">Peer.lives</param>
                                         </action>
                                     </actions>
@@ -1130,7 +1130,7 @@
                                         <condition id="-7" name="Compare instance variable" sid="996735261285934" type="Peer">
                                             <param id="0" name="Instance variable">lives</param>
                                             <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">lastLive</param>
+                                            <param id="2" name="Value">lastLives</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1159,7 +1159,7 @@
                                             <param id="7" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="814084999275764" type="System">
-                                            <param id="0" name="Variable">lastLive</param>
+                                            <param id="0" name="Variable">lastLives</param>
                                             <param id="1" name="Value">Peer.lives</param>
                                         </action>
                                     </actions>
@@ -3306,6 +3306,176 @@
                 <action id="-10" name="Set value" sid="372579667498787" type="HealthBar">
                     <param id="0" name="Instance variable">originalWidth</param>
                     <param id="1" name="Value">HealthBar.Width</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="245364172563868">
+            <conditions>
+                <condition behavior="8Direction" id="1" name="Compare speed" sid="894113838071606" type="Peer">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Speed">10</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="818569876602606">
+                    <conditions>
+                        <condition id="-41" name="Is between angles" sid="441502350701439" type="System">
+                            <param id="0" name="Angle">Peer.8Direction.MovingAngle</param>
+                            <param id="1" name="First angle">337.5</param>
+                            <param id="2" name="Second angle">22.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="361964786437770" type="Sprite">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="803254562015051" type="Sprite">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="687114589760110">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="688028540040992" type="System" />
+                        <condition id="-41" name="Is between angles" sid="134495584549049" type="System">
+                            <param id="0" name="Angle">Peer.8Direction.MovingAngle</param>
+                            <param id="1" name="First angle">157.5</param>
+                            <param id="2" name="Second angle">202.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="167396164995611" type="Sprite">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="711816376955457" type="Sprite">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="513138809180170">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="662501669085290" type="System" />
+                        <condition id="-41" name="Is between angles" sid="889928570012947" type="System">
+                            <param id="0" name="Angle">Peer.8Direction.MovingAngle</param>
+                            <param id="1" name="First angle">247.5</param>
+                            <param id="2" name="Second angle">292.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="231264509122107" type="Sprite">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="441846344519406" type="Sprite">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="602148767954794">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="475427582449067" type="System" />
+                        <condition id="-41" name="Is between angles" sid="206322782345694" type="System">
+                            <param id="0" name="Angle">Peer.8Direction.MovingAngle</param>
+                            <param id="1" name="First angle">67.5</param>
+                            <param id="2" name="Second angle">112.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="775612483847346" type="Sprite">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="724742776510988" type="Sprite">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="640712513083725">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="457597450938625" type="System" />
+                        <condition id="-41" name="Is between angles" sid="627816028603916" type="System">
+                            <param id="0" name="Angle">Peer.8Direction.MovingAngle</param>
+                            <param id="1" name="First angle">292.5</param>
+                            <param id="2" name="Second angle">337.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="974147216490277" type="Sprite">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="993976855888575" type="Sprite">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="175537626661460">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="810529827505041" type="System" />
+                        <condition id="-41" name="Is between angles" sid="553501883235926" type="System">
+                            <param id="0" name="Angle">Peer.8Direction.MovingAngle</param>
+                            <param id="1" name="First angle">202.5</param>
+                            <param id="2" name="Second angle">247.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="540898020202602" type="Sprite">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="211878922455535" type="Sprite">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="236471337371712">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="390735063857926" type="System" />
+                        <condition id="-41" name="Is between angles" sid="349466271351675" type="System">
+                            <param id="0" name="Angle">Peer.8Direction.MovingAngle</param>
+                            <param id="1" name="First angle">112.5</param>
+                            <param id="2" name="Second angle">157.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="305329823797615" type="Sprite">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="854975869003094" type="Sprite">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="278838443002003">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="343150423837353" type="System" />
+                        <condition id="-41" name="Is between angles" sid="886052879363793" type="System">
+                            <param id="0" name="Angle">Peer.8Direction.MovingAngle</param>
+                            <param id="1" name="First angle">22.5</param>
+                            <param id="2" name="Second angle">67.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="274353539921832" type="Sprite">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="813839059192751" type="Sprite">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="476031316724717">
+            <conditions>
+                <condition id="-22" name="Else" sid="322434568532437" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="927463540866321" type="Sprite">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="534033991338325" type="Sprite">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="8" name="Set flipped" sid="784218324902104" type="Sprite">
+                    <param id="0" name="State">1</param>
                 </action>
             </actions>
         </event-block>
