@@ -954,6 +954,7 @@
             <sub-events>
                 <event-group description="" inactive="1" sid="925808660508785" title="Peer">
                     <sub-events>
+                        <variable constant="0" name="lastUpdate" sid="932638682548396" static="1" type="number">0</variable>
                         <variable constant="0" name="lastLives" sid="778036113443952" static="1" type="number">5</variable>
                         <event-block sid="671459069560231">
                             <conditions>
@@ -1526,6 +1527,10 @@
                                                     <param id="2" name="Tile">FLAG</param>
                                                     <param id="3" name="State">0</param>
                                                 </action>
+                                                <action id="-9" name="Set value" sid="356812170966083" type="System">
+                                                    <param id="0" name="Variable">lastUpdate</param>
+                                                    <param id="1" name="Value">int(Browser.ExecJS(&quot;new Date().getTime()&quot;))</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="404413940701458">
@@ -1538,6 +1543,10 @@
                                                     <param id="1" name="Tile Y">y</param>
                                                     <param id="2" name="Tile">COVERED</param>
                                                     <param id="3" name="State">0</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="701048116301495" type="System">
+                                                    <param id="0" name="Variable">lastUpdate</param>
+                                                    <param id="1" name="Value">int(Browser.ExecJS(&quot;new Date().getTime()&quot;))</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1651,6 +1660,10 @@
                                                                             <param id="0" name="Tile X">x + 3x3.CurX - 1</param>
                                                                             <param id="1" name="Tile Y">y + 3x3.CurY - 1</param>
                                                                         </action>
+                                                                        <action id="-9" name="Set value" sid="915798269733328" type="System">
+                                                                            <param id="0" name="Variable">lastUpdate</param>
+                                                                            <param id="1" name="Value">int(Browser.ExecJS(&quot;new Date().getTime()&quot;))</param>
+                                                                        </action>
                                                                     </actions>
                                                                     <sub-events>
                                                                         <event-block sid="769388818441255">
@@ -1753,6 +1766,10 @@
                                                                                     <param id="2" name="Tile">FLAG</param>
                                                                                     <param id="3" name="State">0</param>
                                                                                 </action>
+                                                                                <action id="-9" name="Set value" sid="542366077733380" type="System">
+                                                                                    <param id="0" name="Variable">lastUpdate</param>
+                                                                                    <param id="1" name="Value">int(Browser.ExecJS(&quot;new Date().getTime()&quot;))</param>
+                                                                                </action>
                                                                             </actions>
                                                                         </event-block>
                                                                     </sub-events>
@@ -1820,14 +1837,31 @@
                                     <param id="0" name="Tag">&quot;cover&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="4" name="Load" sid="119051022270584" type="Cover">
-                                    <param id="0" name="JSON">mp.Message</param>
-                                </action>
-                                <action id="4" name="Load" sid="882923684636226" type="Minimap">
-                                    <param id="0" name="JSON">mp.Message</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="json" sid="950669115750770" static="0" type="text"></variable>
+                                <event-block sid="876022750510926">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="404411020868762" type="System">
+                                            <param id="0" name="First value">int(left(mp.Message,14))</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">lastUpdate</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="789834859787708" type="System">
+                                            <param id="0" name="Variable">json</param>
+                                            <param id="1" name="Value">right(mp.Message, len(mp.Message) - 14)</param>
+                                        </action>
+                                        <action id="4" name="Load" sid="119051022270584" type="Cover">
+                                            <param id="0" name="JSON">json</param>
+                                        </action>
+                                        <action id="4" name="Load" sid="882923684636226" type="Minimap">
+                                            <param id="0" name="JSON">json</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -2958,7 +2992,7 @@
                                         <action id="9" name="Broadcast message" sid="979698108880048" type="mp">
                                             <param id="0" name="From ID">&quot;&quot;</param>
                                             <param id="1" name="Tag">&quot;cover&quot;</param>
-                                            <param id="2" name="Message">msg</param>
+                                            <param id="2" name="Message">zeropad(Browser.ExecJS(&quot;new Date().getTime()&quot;), 14) &amp; msg</param>
                                             <param id="3" name="Mode">1</param>
                                         </action>
                                         <action id="4" name="Load" sid="202936105757781" type="Minimap">
@@ -3333,6 +3367,9 @@
                         <action id="7" name="Set mirrored" sid="803254562015051" type="Sprite">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="8" name="Set flipped" sid="225699521182569" type="Sprite">
+                            <param id="0" name="State">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="687114589760110">
@@ -3351,6 +3388,9 @@
                         <action id="7" name="Set mirrored" sid="711816376955457" type="Sprite">
                             <param id="0" name="State">1</param>
                         </action>
+                        <action id="8" name="Set flipped" sid="108008692911914" type="Sprite">
+                            <param id="0" name="State">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="513138809180170">
@@ -3365,6 +3405,9 @@
                     <actions>
                         <action id="5" name="Set frame" sid="231264509122107" type="Sprite">
                             <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="690914009485900" type="Sprite">
+                            <param id="0" name="State">1</param>
                         </action>
                         <action id="8" name="Set flipped" sid="441846344519406" type="Sprite">
                             <param id="0" name="State">1</param>
@@ -3383,6 +3426,9 @@
                     <actions>
                         <action id="5" name="Set frame" sid="775612483847346" type="Sprite">
                             <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="721964515700431" type="Sprite">
+                            <param id="0" name="State">1</param>
                         </action>
                         <action id="8" name="Set flipped" sid="724742776510988" type="Sprite">
                             <param id="0" name="State">0</param>
@@ -3405,6 +3451,9 @@
                         <action id="7" name="Set mirrored" sid="993976855888575" type="Sprite">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="8" name="Set flipped" sid="135807303182672" type="Sprite">
+                            <param id="0" name="State">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="175537626661460">
@@ -3421,6 +3470,9 @@
                             <param id="0" name="Frame number">3</param>
                         </action>
                         <action id="7" name="Set mirrored" sid="211878922455535" type="Sprite">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="465933526693046" type="Sprite">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
@@ -3441,6 +3493,9 @@
                         <action id="7" name="Set mirrored" sid="854975869003094" type="Sprite">
                             <param id="0" name="State">1</param>
                         </action>
+                        <action id="8" name="Set flipped" sid="880213656452784" type="Sprite">
+                            <param id="0" name="State">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="278838443002003">
@@ -3458,6 +3513,9 @@
                         </action>
                         <action id="7" name="Set mirrored" sid="813839059192751" type="Sprite">
                             <param id="0" name="State">0</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="947341573828034" type="Sprite">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
