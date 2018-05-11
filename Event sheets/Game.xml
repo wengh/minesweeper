@@ -986,7 +986,7 @@
                                 </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="992982927784626" type="Sprite">
                                     <param id="0" name="Pin to">Peer</param>
-                                    <param id="1" name="Mode">0</param>
+                                    <param id="1" name="Mode">1</param>
                                 </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="398434007589992" type="PlayerName">
                                     <param id="0" name="Pin to">Peer</param>
@@ -1890,11 +1890,11 @@
                                 </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="548041373255099" type="Sprite">
                                     <param id="0" name="Pin to">Peer</param>
-                                    <param id="1" name="Mode">0</param>
+                                    <param id="1" name="Mode">1</param>
                                 </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="953517195068574" type="PlayerName">
                                     <param id="0" name="Pin to">Peer</param>
-                                    <param id="1" name="Mode">0</param>
+                                    <param id="1" name="Mode">1</param>
                                 </action>
                                 <action id="0" name="Set text" sid="525921775832812" type="PlayerName">
                                     <param id="0" name="Text">name</param>
@@ -2065,11 +2065,11 @@
                                 </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="799135166435032" type="Sprite">
                                     <param id="0" name="Pin to">Peer</param>
-                                    <param id="1" name="Mode">0</param>
+                                    <param id="1" name="Mode">1</param>
                                 </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="998434304194438" type="PlayerName">
                                     <param id="0" name="Pin to">Peer</param>
-                                    <param id="1" name="Mode">0</param>
+                                    <param id="1" name="Mode">1</param>
                                 </action>
                                 <action id="0" name="Spawn another object" sid="382452101593673" type="Peer">
                                     <param id="0" name="Object">Parachute</param>
