@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MainMenu</name>
     <events>
+        <variable constant="0" name="helpName" sid="669005267129341" static="0" type="text">HelpLayoutEn</variable>
         <event-block sid="178065028213008">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="914626192145726" type="System" />
@@ -200,6 +201,10 @@
                         <action id="0" name="Set tooltip" sid="501932628723665" type="Difficulty">
                             <param id="0" name="Tooltip">&quot;Number of mines&quot;</param>
                         </action>
+                        <action id="-9" name="Set value" sid="569828833834723" type="System">
+                            <param id="0" name="Variable">helpName</param>
+                            <param id="1" name="Value">&quot;HelpLayoutEn&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="155451975616210">
@@ -225,6 +230,10 @@
                         </action>
                         <action id="0" name="Set tooltip" sid="647831812264729" type="Difficulty">
                             <param id="0" name="Tooltip">&quot;Nombre de mines&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="946983886226704" type="System">
+                            <param id="0" name="Variable">helpName</param>
+                            <param id="1" name="Value">&quot;HelpLayoutEn&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -252,6 +261,10 @@
                         <action id="0" name="Set tooltip" sid="377650572325774" type="Difficulty">
                             <param id="0" name="Tooltip">&quot;地雷数量&quot;</param>
                         </action>
+                        <action id="-9" name="Set value" sid="578278396943167" type="System">
+                            <param id="0" name="Variable">helpName</param>
+                            <param id="1" name="Value">&quot;HelpLayoutZh&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -261,8 +274,8 @@
                 <condition id="0" name="On clicked" sid="484090810163170" type="HelpButton" />
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="875648554330991" type="System">
-                    <param id="0" name="Layout">HelpLayout</param>
+                <action id="-25" name="Go to layout (by name)" sid="875648554330991" type="System">
+                    <param id="0" name="Layout">helpName</param>
                 </action>
             </actions>
         </event-block>
@@ -282,6 +295,35 @@
                 <action id="1" name="Append text" sid="818362250858591" type="Message">
                     <param id="0" name="Text">&quot; - Updating&quot;</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="989345529280219">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="706222917688125" type="System">
+                    <param id="0" name="Interval (seconds)">0.2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="965233246302918" type="System">
+                    <param id="0" name="Object to create">Explosion</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">random(30, 280)</param>
+                    <param id="3" name="Y">random(150, 350)</param>
+                </action>
+                <action id="-8" name="Set angle" sid="269033337080558" type="Explosion">
+                    <param id="0" name="Angle">random(0, 359)</param>
+                </action>
+                <action id="9" name="Set scale" sid="506801434149326" type="Explosion">
+                    <param id="0" name="Scale">random(0.9, 1.5)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="910435875056948">
+            <conditions>
+                <condition id="5" name="On any finished" sid="934295014705313" type="Explosion" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="880549161722913" type="Explosion" />
             </actions>
         </event-block>
     </events>

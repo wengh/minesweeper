@@ -1043,24 +1043,43 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="608091545951274">
+                        <event-block sid="836949205211690">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="468173323169816" type="Peer">
+                                <condition id="-7" name="Compare instance variable" sid="324959454269604" type="Peer">
                                     <param id="0" name="Instance variable">parachute</param>
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
-                                <condition behavior="8Direction" id="1" name="Compare speed" sid="774001530886470" type="Peer">
-                                    <param id="0" name="Comparison">1</param>
-                                    <param id="1" name="Speed">0</param>
-                                </condition>
                             </conditions>
-                            <actions>
-                                <action id="-20" name="Rotate toward angle" sid="997340080034481" type="Peer">
-                                    <param id="0" name="Degrees">10</param>
-                                    <param id="1" name="Angle">Peer.8Direction.MovingAngle + 90</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="538921248184324">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="609167415605331" type="System">
+                                            <param id="0" name="Interval (seconds)">1.0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="470723652324473" type="ParachuteProgress">
+                                            <param id="0" name="Y">50 + 30 * (10 - Peer.parachute)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="959360309148816">
+                                    <conditions>
+                                        <condition behavior="8Direction" id="1" name="Compare speed" sid="774001530886470" type="Peer">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Speed">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-20" name="Rotate toward angle" sid="997340080034481" type="Peer">
+                                            <param id="0" name="Degrees">10</param>
+                                            <param id="1" name="Angle">Peer.8Direction.MovingAngle + 90</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="716604322061142">
                             <conditions>
@@ -2968,7 +2987,7 @@
                                             <param id="0" name="From ID">&quot;&quot;</param>
                                             <param id="1" name="Tag">&quot;base&quot;</param>
                                             <param id="2" name="Message">Base.TilesJSON</param>
-                                            <param id="3" name="Mode">1</param>
+                                            <param id="3" name="Mode">2</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="763462337436511" type="System">
                                             <param id="0" name="Variable">syncQueued</param>
@@ -2993,7 +3012,7 @@
                                             <param id="0" name="From ID">&quot;&quot;</param>
                                             <param id="1" name="Tag">&quot;cover&quot;</param>
                                             <param id="2" name="Message">zeropad(Browser.ExecJS(&quot;new Date().getTime()&quot;), 14) &amp; msg</param>
-                                            <param id="3" name="Mode">1</param>
+                                            <param id="3" name="Mode">2</param>
                                         </action>
                                         <action id="4" name="Load" sid="202936105757781" type="Minimap">
                                             <param id="0" name="JSON">msg</param>

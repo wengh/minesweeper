@@ -231,7 +231,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
                 <instance type="Explosion" uid="7">
@@ -718,8 +718,8 @@
                         <width>20</width>
                         <height>20</height>
                         <depth>0</depth>
-                        <hotspotX>1</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
                         <angle>1.570796371</angle>
                         <opacity>1</opacity>
                     </world>

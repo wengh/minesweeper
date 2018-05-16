@@ -193,28 +193,6 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="Banner" uid="20">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>124</x>
-                        <y>244</y>
-                        <z>0</z>
-                        <width>160</width>
-                        <height>110</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5625</hotspotX>
-                        <hotspotY>0.363636374</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="BackButton" uid="53">
                     <properties>
                         <type>Button</type>

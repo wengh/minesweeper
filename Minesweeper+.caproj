@@ -2,7 +2,7 @@
 <c2project>
     <name>Minesweeper+</name>
     <description></description>
-    <version>0.7.2</version>
+    <version>0.7.3</version>
     <author>Weng Haoyu</author>
     <author-email>whyharry9@gmail.com</author-email>
     <author-website>http://wenghy.me</author-website>
@@ -69,7 +69,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -269,17 +269,6 @@
         <object-type name="Language" sid="962605030909229">
             <plugin id="List" />
         </object-type>
-        <object-type name="Banner" sid="914694316277331">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="310844894369568" speed="3">
-                    <frame duration="1" hotspotX="0.5625" hotspotY="0.363636" />
-                    <frame duration="1" hotspotX="0.571429" hotspotY="0.416667" />
-                    <frame duration="1" hotspotX="0.5625" hotspotY="0.363636" />
-                    <frame duration="1" hotspotX="0.555556" hotspotY="0.3" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Touch" sid="445337603065423">
             <plugin id="Touch" />
         </object-type>
@@ -432,7 +421,7 @@
         <object-type name="ParachuteProgress" sid="849082326748472">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Bullet" sid="697589417685345">
+                <behavior-type name="Bullet" sid="235520498230580">
                     <behavior id="Bullet" />
                 </behavior-type>
             </behaviors>
@@ -458,7 +447,8 @@
         <layout>MainMenuLayout.xml</layout>
         <layout>GameLayout.xml</layout>
         <layout>MultiplayerLayout.xml</layout>
-        <layout>HelpLayout.xml</layout>
+        <layout>HelpLayoutZh.xml</layout>
+        <layout>HelpLayoutEn.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Game.xml</event-sheet>
