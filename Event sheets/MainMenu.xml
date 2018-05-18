@@ -300,7 +300,12 @@
         <event-block sid="989345529280219">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="706222917688125" type="System">
-                    <param id="0" name="Interval (seconds)">0.2</param>
+                    <param id="0" name="Interval (seconds)">0.05</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="688453222474237" type="System">
+                    <param id="0" name="First value">random(10)</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">3</param>
                 </condition>
             </conditions>
             <actions>
@@ -311,7 +316,7 @@
                     <param id="3" name="Y">random(150, 350)</param>
                 </action>
                 <action id="-8" name="Set angle" sid="269033337080558" type="Explosion">
-                    <param id="0" name="Angle">random(0, 359)</param>
+                    <param id="0" name="Angle">random(0, 360)</param>
                 </action>
                 <action id="9" name="Set scale" sid="506801434149326" type="Explosion">
                     <param id="0" name="Scale">random(0.9, 1.5)</param>
