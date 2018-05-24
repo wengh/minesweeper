@@ -233,7 +233,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="946983886226704" type="System">
                             <param id="0" name="Variable">helpName</param>
-                            <param id="1" name="Value">&quot;HelpLayoutEn&quot;</param>
+                            <param id="1" name="Value">&quot;HelpLayoutFr&quot;</param>
                         </action>
                     </actions>
                 </event-block>

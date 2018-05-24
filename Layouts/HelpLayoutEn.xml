@@ -182,7 +182,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="UI" sid="857853723235442">
+        <layer name="Text" sid="857853723235442">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -198,54 +198,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="WikiButton" uid="67">
-                    <properties>
-                        <type>Button</type>
-                        <text>Minesweeper Wiki</text>
-                        <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <auto-font-size>Yes</auto-font-size>
-                        <id-optional></id-optional>
-                        <checked>No</checked>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>32</x>
-                        <y>4</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>24</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                    </world>
-                </instance>
-                <instance type="BackButton" uid="68">
-                    <properties>
-                        <type>Button</type>
-                        <text>&lt;</text>
-                        <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <auto-font-size>Yes</auto-font-size>
-                        <id-optional></id-optional>
-                        <checked>No</checked>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>4</x>
-                        <y>4</y>
-                        <z>0</z>
-                        <width>24</width>
-                        <height>24</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                    </world>
-                </instance>
                 <instance type="TutControl" uid="69">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -519,6 +471,190 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Tutorial" uid="105">
+                    <properties>
+                        <text>Movement</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Rockwell,-12,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>227.543334961</x>
+                        <y>444.594726563</y>
+                        <z>0</z>
+                        <width>130.862686157</width>
+                        <height>23.529960632</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="HUD" sid="859827702991724">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="WikiButton" uid="67">
+                    <properties>
+                        <type>Button</type>
+                        <text>Minesweeper Wiki</text>
+                        <tooltip></tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <checked>No</checked>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>32</x>
+                        <y>4</y>
+                        <z>0</z>
+                        <width>134</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="BackButton" uid="68">
+                    <properties>
+                        <type>Button</type>
+                        <text>&lt;</text>
+                        <tooltip>Go back</tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <checked>No</checked>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4</x>
+                        <y>4</y>
+                        <z>0</z>
+                        <width>24</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="NextButton" uid="96">
+                    <properties>
+                        <type>Button</type>
+                        <text>v</text>
+                        <tooltip>Next</tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <checked>No</checked>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>570</x>
+                        <y>320</y>
+                        <z>0</z>
+                        <width>24</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="TutControl" uid="102">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>WASD</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>181.778686523</x>
+                        <y>396.989074707</y>
+                        <z>0</z>
+                        <width>62</width>
+                        <height>42</height>
+                        <depth>0</depth>
+                        <hotspotX>0.54838711</hotspotX>
+                        <hotspotY>0.523809552</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TutControl" uid="103">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Separator</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>240.778686523</x>
+                        <y>425.989074707</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TutControl" uid="104">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Arrows</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>288.778686523</x>
+                        <y>396.989074707</y>
+                        <z>0</z>
+                        <width>62</width>
+                        <height>42</height>
+                        <depth>0</depth>
+                        <hotspotX>0.54838711</hotspotX>
+                        <hotspotY>0.523809552</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -387,6 +387,21 @@
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
+                <animation framecount="1" loop="0" name="WASD" pingpong="0" repeatcount="1" repeatto="0" sid="584123734456606" speed="5">
+                    <frame duration="1" hotspotX="0.548387" hotspotY="0.52381" />
+                </animation>
+                <animation framecount="1" loop="0" name="Arrows" pingpong="0" repeatcount="1" repeatto="0" sid="222200643727492" speed="5">
+                    <frame duration="1" hotspotX="0.548387" hotspotY="0.52381" />
+                </animation>
+                <animation framecount="1" loop="0" name="Space" pingpong="0" repeatcount="1" repeatto="0" sid="825485113591968" speed="5">
+                    <frame duration="1" hotspotX="0.545455" hotspotY="0.545455" />
+                </animation>
+                <animation framecount="1" loop="0" name="Q" pingpong="0" repeatcount="1" repeatto="0" sid="788338065196648" speed="5">
+                    <frame duration="1" hotspotX="1.63636" hotspotY="0.545455" />
+                </animation>
+                <animation framecount="1" loop="0" name="Separator" pingpong="0" repeatcount="1" repeatto="0" sid="926415748027104" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="1" />
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Tutorial" sid="800390136972890">
@@ -441,6 +456,9 @@
         <object-type name="LocalStorage" sid="423984952874309">
             <plugin id="LocalStorage" />
         </object-type>
+        <object-type name="NextButton" sid="809976316714843">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -449,6 +467,7 @@
         <layout>MultiplayerLayout.xml</layout>
         <layout>HelpLayoutZh.xml</layout>
         <layout>HelpLayoutEn.xml</layout>
+        <layout>HelpLayoutFr.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Game.xml</event-sheet>

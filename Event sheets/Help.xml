@@ -24,5 +24,15 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="894607635335636">
+            <conditions>
+                <condition id="0" name="On clicked" sid="590575491042830" type="NextButton" />
+            </conditions>
+            <actions>
+                <action id="-6" name="Scroll to Y" sid="134948730247808" type="System">
+                    <param id="0" name="Y">scrolly + 350</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
