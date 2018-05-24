@@ -2,7 +2,7 @@
 <c2project>
     <name>Minesweeper+</name>
     <description></description>
-    <version>0.7.3</version>
+    <version>0.7.4</version>
     <author>Weng Haoyu</author>
     <author-email>whyharry9@gmail.com</author-email>
     <author-website>http://wenghy.me</author-website>
@@ -57,15 +57,15 @@
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
     <first-layout>MainMenuLayout</first-layout>
-    <use-loader-layout>1</use-loader-layout>
+    <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
-        <prop name="Clear background">Yes</prop>
+        <prop name="Clear background">No</prop>
         <prop name="Downscaling">Medium quality</prop>
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
-        <prop name="Orientations">Any</prop>
+        <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
@@ -402,6 +402,9 @@
                 <animation framecount="1" loop="0" name="Separator" pingpong="0" repeatcount="1" repeatto="0" sid="926415748027104" speed="5">
                     <frame duration="1" hotspotX="1" hotspotY="1" />
                 </animation>
+                <animation framecount="1" loop="0" name="F5" pingpong="0" repeatcount="1" repeatto="0" sid="639318825403897" speed="5">
+                    <frame duration="1" hotspotX="1.15385" hotspotY="0.545455" />
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Tutorial" sid="800390136972890">
@@ -459,6 +462,9 @@
         <object-type name="NextButton" sid="809976316714843">
             <plugin id="Button" />
         </object-type>
+        <object-type name="PreviousButton" sid="662654886008023">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -510,11 +516,7 @@
     <music-folder />
     <files-folder>
         <file-folder name="Icons">
-            <file name="icon-16.png" />
-            <file name="icon-32.png" />
-            <file name="icon-114.png" />
-            <file name="icon-128.png" />
-            <file name="icon-256.png" />
+            <file name="icon.png" />
             <file name="loading-logo.png" />
         </file-folder>
     </files-folder>

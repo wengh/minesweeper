@@ -475,6 +475,241 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="TutControl" uid="99">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>WASD</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>121</x>
+                        <y>469</y>
+                        <z>0</z>
+                        <width>62</width>
+                        <height>42</height>
+                        <depth>0</depth>
+                        <hotspotX>0.54838711</hotspotX>
+                        <hotspotY>0.523809552</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TutControl" uid="100">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Separator</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>180</x>
+                        <y>498</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TutControl" uid="101">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Arrows</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>228</x>
+                        <y>469</y>
+                        <z>0</z>
+                        <width>62</width>
+                        <height>42</height>
+                        <depth>0</depth>
+                        <hotspotX>0.54838711</hotspotX>
+                        <hotspotY>0.523809552</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Tutorial" uid="106">
+                    <properties>
+                        <text>玩家移动</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Rockwell,-12,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>169</x>
+                        <y>512</y>
+                        <z>0</z>
+                        <width>130.862686157</width>
+                        <height>23.529960632</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TutControl" uid="111">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Space</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>365</x>
+                        <y>468</y>
+                        <z>0</z>
+                        <width>66</width>
+                        <height>22</height>
+                        <depth>0</depth>
+                        <hotspotX>0.545454562</hotspotX>
+                        <hotspotY>0.545454562</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TutControl" uid="112">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Separator</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>428</x>
+                        <y>497</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TutControl" uid="113">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Q</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>488</x>
+                        <y>469</y>
+                        <z>0</z>
+                        <width>22</width>
+                        <height>22</height>
+                        <depth>0</depth>
+                        <hotspotX>1.636363626</hotspotX>
+                        <hotspotY>0.545454562</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Tutorial" uid="114">
+                    <properties>
+                        <text>投掷手雷</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Rockwell,-12,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>412</x>
+                        <y>513</y>
+                        <z>0</z>
+                        <width>130.862686157</width>
+                        <height>23.529960632</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TutControl" uid="115">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>F5</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>317</x>
+                        <y>569</y>
+                        <z>0</z>
+                        <width>26</width>
+                        <height>22</height>
+                        <depth>0</depth>
+                        <hotspotX>1.153846145</hotspotX>
+                        <hotspotY>0.545454562</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Tutorial" uid="116">
+                    <properties>
+                        <text>重新开始</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Rockwell,-12,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>299</x>
+                        <y>599</y>
+                        <z>0</z>
+                        <width>130.862686157</width>
+                        <height>23.529960632</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -566,70 +801,28 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="TutControl" uid="99">
+                <instance type="PreviousButton" uid="131">
                     <properties>
+                        <type>Button</type>
+                        <text>ʌ</text>
+                        <tooltip>上一步</tooltip>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>WASD</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <enabled>Yes</enabled>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <checked>No</checked>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>186</x>
-                        <y>400</y>
+                        <x>570</x>
+                        <y>4</y>
                         <z>0</z>
-                        <width>62</width>
-                        <height>42</height>
+                        <width>24</width>
+                        <height>24</height>
                         <depth>0</depth>
-                        <hotspotX>0.54838711</hotspotX>
-                        <hotspotY>0.523809552</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TutControl" uid="100">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Separator</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>245</x>
-                        <y>429</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>1</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TutControl" uid="101">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Arrows</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>293</x>
-                        <y>400</y>
-                        <z>0</z>
-                        <width>62</width>
-                        <height>42</height>
-                        <depth>0</depth>
-                        <hotspotX>0.54838711</hotspotX>
-                        <hotspotY>0.523809552</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                     </world>
                 </instance>
             </instances>
