@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1527190577,
+	"version": 1527262997,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -10,6 +10,7 @@
 		"images/peer-sheet0.png",
 		"images/explosion-sheet0.png",
 		"images/explosion-sheet1.png",
+		"images/explosion-sheet2.png",
 		"images/grenade-sheet0.png",
 		"images/heart.png",
 		"images/mapbg.png",
@@ -28,8 +29,12 @@
 		"media/explosion.m4a",
 		"media/explosion.ogg",
 		"media/click.ogg",
-		"icon.png",
 		"loading-logo.png",
+		"icon-16.png",
+		"icon-32.png",
+		"icon-114.png",
+		"icon-128.png",
+		"icon-256.png",
 		"c2mp-net.js",
 		"c2mp-peer.js",
 		"c2mp.js",
