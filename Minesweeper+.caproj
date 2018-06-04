@@ -516,7 +516,6 @@
     <music-folder />
     <files-folder>
         <file-folder name="Icons">
-            <file name="icon.png" />
             <file name="loading-logo.png" />
             <file name="icon-16.png" />
             <file name="icon-32.png" />

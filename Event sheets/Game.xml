@@ -2543,19 +2543,32 @@
                                                         <condition id="3" name="For each element" sid="474270659547468" type="3x3">
                                                             <param id="0" name="Axes">1</param>
                                                         </condition>
-                                                        <condition id="0" name="Compare tile at" sid="868760884830037" type="Cover">
-                                                            <param id="0" name="Tile X">x + 3x3.CurX - 1</param>
-                                                            <param id="1" name="Tile Y">y + 3x3.CurY - 1</param>
-                                                            <param id="2" name="Comparison">0</param>
-                                                            <param id="3" name="Tile">COVERED</param>
-                                                        </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="-10" name="Add to" sid="399942044992598" type="System">
-                                                            <param id="0" name="Variable">hiddenTiles</param>
-                                                            <param id="1" name="Value">1</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="389293295669866">
+                                                            <conditions>
+                                                                <condition id="0" name="Compare tile at" sid="868760884830037" type="Cover">
+                                                                    <param id="0" name="Tile X">x + 3x3.CurX - 1</param>
+                                                                    <param id="1" name="Tile Y">y + 3x3.CurY - 1</param>
+                                                                    <param id="2" name="Comparison">0</param>
+                                                                    <param id="3" name="Tile">COVERED</param>
+                                                                </condition>
+                                                                <condition id="0" name="Compare tile at" sid="346150439575155" type="Cover">
+                                                                    <param id="0" name="Tile X">x + 3x3.CurX - 1</param>
+                                                                    <param id="1" name="Tile Y">y + 3x3.CurY - 1</param>
+                                                                    <param id="2" name="Comparison">0</param>
+                                                                    <param id="3" name="Tile">FLAG</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Add to" sid="399942044992598" type="System">
+                                                                    <param id="0" name="Variable">hiddenTiles</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <comment>Reveler la case</comment>
                                                 <event-block sid="848082963784013">
@@ -2819,19 +2832,32 @@
                                                         <condition id="3" name="For each element" sid="554456976728653" type="3x3">
                                                             <param id="0" name="Axes">1</param>
                                                         </condition>
-                                                        <condition id="0" name="Compare tile at" sid="477854619274889" type="Cover">
-                                                            <param id="0" name="Tile X">x + 3x3.CurX - 1</param>
-                                                            <param id="1" name="Tile Y">y + 3x3.CurY - 1</param>
-                                                            <param id="2" name="Comparison">0</param>
-                                                            <param id="3" name="Tile">COVERED</param>
-                                                        </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="-11" name="Subtract from" sid="518033143808468" type="System">
-                                                            <param id="0" name="Variable">hiddenTiles</param>
-                                                            <param id="1" name="Value">1</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="430146245495523">
+                                                            <conditions>
+                                                                <condition id="0" name="Compare tile at" sid="477854619274889" type="Cover">
+                                                                    <param id="0" name="Tile X">x + 3x3.CurX - 1</param>
+                                                                    <param id="1" name="Tile Y">y + 3x3.CurY - 1</param>
+                                                                    <param id="2" name="Comparison">0</param>
+                                                                    <param id="3" name="Tile">COVERED</param>
+                                                                </condition>
+                                                                <condition id="0" name="Compare tile at" sid="159489830511555" type="Cover">
+                                                                    <param id="0" name="Tile X">x + 3x3.CurX - 1</param>
+                                                                    <param id="1" name="Tile Y">y + 3x3.CurY - 1</param>
+                                                                    <param id="2" name="Comparison">0</param>
+                                                                    <param id="3" name="Tile">FLAG</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-11" name="Subtract from" sid="518033143808468" type="System">
+                                                                    <param id="0" name="Variable">hiddenTiles</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <event-block sid="815052215886786">
                                                     <conditions />
