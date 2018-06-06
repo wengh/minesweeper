@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1527262997
+#1528314763
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -9,7 +9,6 @@ images/sprite-sheet0.png
 images/peer-sheet0.png
 images/explosion-sheet0.png
 images/explosion-sheet1.png
-images/explosion-sheet2.png
 images/grenade-sheet0.png
 images/heart.png
 images/mapbg.png
@@ -25,9 +24,11 @@ images/tutcontrol-sheet1.png
 images/panel.png
 images/parachute-sheet0.png
 images/parachuteprogress-sheet0.png
+images/hint-sheet0.png
 media/explosion.m4a
 media/explosion.ogg
 media/click.ogg
+media/bgm.ogg
 loading-logo.png
 icon-16.png
 icon-32.png

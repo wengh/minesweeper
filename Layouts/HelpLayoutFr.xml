@@ -720,15 +720,15 @@
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
+                        <line-height>2</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>298</x>
+                        <x>296.5</x>
                         <y>180.5</y>
                         <z>0</z>
-                        <width>539</width>
+                        <width>450</width>
                         <height>254</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>

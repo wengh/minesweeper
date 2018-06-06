@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1527262997,
+	"version": 1528314763,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -10,7 +10,6 @@
 		"images/peer-sheet0.png",
 		"images/explosion-sheet0.png",
 		"images/explosion-sheet1.png",
-		"images/explosion-sheet2.png",
 		"images/grenade-sheet0.png",
 		"images/heart.png",
 		"images/mapbg.png",
@@ -26,9 +25,11 @@
 		"images/panel.png",
 		"images/parachute-sheet0.png",
 		"images/parachuteprogress-sheet0.png",
+		"images/hint-sheet0.png",
 		"media/explosion.m4a",
 		"media/explosion.ogg",
 		"media/click.ogg",
+		"media/bgm.ogg",
 		"loading-logo.png",
 		"icon-16.png",
 		"icon-32.png",
