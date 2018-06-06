@@ -31,7 +31,7 @@
                 <condition id="-14" name="Compare variable" sid="405521641290717" type="System">
                     <param id="0" name="Variable">helpPage</param>
                     <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Value">1</param>
+                    <param id="2" name="Value">2</param>
                 </condition>
             </conditions>
             <actions>

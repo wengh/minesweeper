@@ -712,12 +712,12 @@
                 </instance>
                 <instance type="Tutorial" uid="132">
                     <properties>
-                        <text>Récemment, les géologues ont découvert une région remplie de métaux précieux. Pour prendre possession de la région, plusieurs factions se combattent ici. À la fin, personne ne l’a gagné, car cette région est remplie de mines et de projectiles qui n’ont pas explosé.</text>
+                        <text>Il y a 10 ans, les géologues ont découvert une région remplie de métaux précieux. Pour prendre possession de la région, plusieurs États se combattent ici. Après 8 années de conflit, personne ne l’a gagné, car cette région est remplie de mines et de projectiles qui n’ont pas explosé. Vous, un explorateur professionnel, représentez votre État. Vous devez collecter les ressources tout en éliminant vos ennemis avec des grenades et en indiquant les mines pour sécuriser la région. Quand vous ouvrez une case, vous gagnez un point si elle est sécuritaire, et vous perdez une vie si vous trouvez malheureusement une mine. Vous pouvez lancer une grenade à l’échange de 5 points dans la direction du curseur chaque 2 secondes. Le dommage de la grenade varie selon la distance avec le joueur. Attention, vous avez seulement 5 vies! Pour changer la page, cliquez sur les boutons à droite.</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Rockwell,-12,400,0</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -725,11 +725,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>276.568664551</x>
-                        <y>204.735015869</y>
+                        <x>298</x>
+                        <y>180.5</y>
                         <z>0</z>
-                        <width>420</width>
-                        <height>303</height>
+                        <width>539</width>
+                        <height>254</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

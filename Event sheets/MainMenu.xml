@@ -21,6 +21,12 @@
                 <action id="1" name="Get item" sid="490338365712613" type="LocalStorage">
                     <param id="0" name="Key">&quot;lang&quot;</param>
                 </action>
+                <action id="0" name="Play" sid="980541938467361" type="Audio">
+                    <param id="0" name="Audio file">BGM</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="894839298120231">

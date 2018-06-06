@@ -122,7 +122,7 @@
                         <action id="25" name="Play at object" sid="491406362209579" type="Audio">
                             <param id="0" name="Audio file">Explosion</param>
                             <param id="1" name="Loop">0</param>
-                            <param id="2" name="Volume">0</param>
+                            <param id="2" name="Volume">-10</param>
                             <param id="3" name="Object">Explosion</param>
                             <param id="4" name="Inner angle">360</param>
                             <param id="5" name="Outer angle">360</param>
@@ -2546,7 +2546,7 @@
                                                     </conditions>
                                                     <actions />
                                                     <sub-events>
-                                                        <event-block sid="389293295669866">
+                                                        <event-block any="1" sid="389293295669866">
                                                             <conditions>
                                                                 <condition id="0" name="Compare tile at" sid="868760884830037" type="Cover">
                                                                     <param id="0" name="Tile X">x + 3x3.CurX - 1</param>
@@ -2835,7 +2835,7 @@
                                                     </conditions>
                                                     <actions />
                                                     <sub-events>
-                                                        <event-block sid="430146245495523">
+                                                        <event-block any="1" sid="430146245495523">
                                                             <conditions>
                                                                 <condition id="0" name="Compare tile at" sid="477854619274889" type="Cover">
                                                                     <param id="0" name="Tile X">x + 3x3.CurX - 1</param>

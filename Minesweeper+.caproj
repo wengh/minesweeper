@@ -69,7 +69,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -513,7 +513,9 @@
         <file name="Explosion.ogg" />
         <file name="Click.ogg" />
     </sounds-folder>
-    <music-folder />
+    <music-folder>
+        <file name="BGM.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="loading-logo.png" />
