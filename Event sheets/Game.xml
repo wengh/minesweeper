@@ -144,6 +144,13 @@
                             <param id="2" name="Tile">TOGGLED_MINE</param>
                             <param id="3" name="State">0</param>
                         </action>
+                        <action id="-16" name="Wait" sid="734995652409934" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="115102657022075" type="Peer">
+                            <param id="0" name="X">Peer.spawnX</param>
+                            <param id="1" name="Y">Peer.spawnY</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="311233729320783">
@@ -442,6 +449,14 @@
                         <action id="-9" name="Destroy" sid="429421918586498" type="Coin" />
                         <action id="-9" name="Destroy" sid="852571862379685" type="Score" />
                         <action id="-9" name="Destroy" sid="214214179197316" type="ParachuteProgress" />
+                        <action id="-10" name="Set value" sid="241851631515015" type="Peer">
+                            <param id="0" name="Instance variable">spawnX</param>
+                            <param id="1" name="Value">Peer.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="625538840417955" type="Peer">
+                            <param id="0" name="Instance variable">spawnY</param>
+                            <param id="1" name="Value">Peer.Y</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <comment>Génération de terrain</comment>
@@ -1938,6 +1953,14 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="547675264291162" type="ParachuteProgress" />
+                                <action id="-10" name="Set value" sid="363051862065722" type="Peer">
+                                    <param id="0" name="Instance variable">spawnX</param>
+                                    <param id="1" name="Value">Peer.X</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="257951352758186" type="Peer">
+                                    <param id="0" name="Instance variable">spawnY</param>
+                                    <param id="1" name="Value">Peer.Y</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <comment>Génération de terrain</comment>
@@ -2185,6 +2208,14 @@
                                 <action id="0" name="Call function" sid="459716773195147" type="f">
                                     <param id="0" name="Name">&quot;SyncTiles&quot;</param>
                                     <param id="1" name="Parameter {n}">3</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="446990922565813" type="Peer">
+                                    <param id="0" name="Instance variable">spawnX</param>
+                                    <param id="1" name="Value">Peer.X</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="878899089796060" type="Peer">
+                                    <param id="0" name="Instance variable">spawnY</param>
+                                    <param id="1" name="Value">Peer.Y</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3117,7 +3148,33 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="294132483452717" type="Peer">
                                     <param id="0" name="Instance variable">health</param>
-                                    <param id="1" name="Value">min(Peer.health + 3, 100)</param>
+                                    <param id="1" name="Value">min(Peer.health + 0.1 * (100 - Peer.health), 100)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="643537816914848">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="962358735477829" type="Peer">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="292352299874132" type="Peer">
+                                    <param id="0" name="Instance variable">health</param>
+                                    <param id="1" name="Value">100</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="282746494213737" type="Peer">
+                                    <param id="0" name="Instance variable">lives</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="310607133041353" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="708629594832476" type="Peer">
+                                    <param id="0" name="X">Peer.spawnX</param>
+                                    <param id="1" name="Y">Peer.spawnY</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3152,27 +3209,6 @@
                             <param id="0" name="Text">Peer.score</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="547002168097007">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="680366097788599" type="Peer">
-                                    <param id="0" name="Instance variable">health</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="569390210642910" type="Peer">
-                                    <param id="0" name="Instance variable">health</param>
-                                    <param id="1" name="Value">100</param>
-                                </action>
-                                <action id="-12" name="Subtract from" sid="483935250503632" type="Peer">
-                                    <param id="0" name="Instance variable">lives</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-block sid="661627012293730">
                     <conditions>
