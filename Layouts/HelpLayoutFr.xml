@@ -47,15 +47,6 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="AlphaClamp">
-                            <parameters>
-                                <lower-clamp>0</lower-clamp>
-                                <threshold>0.5</threshold>
-                                <upper-clamp>0.4</upper-clamp>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -149,15 +140,6 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="AlphaClamp">
-                            <parameters>
-                                <lower-clamp>0</lower-clamp>
-                                <threshold>0.5</threshold>
-                                <upper-clamp>0.25</upper-clamp>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>

@@ -44,7 +44,6 @@
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
-        <effect author="Scirra" id="alphaclamp">Alpha clamp</effect>
         <effect author="Viktor Korsun" id="waterbg">Water background</effect>
     </used-effects>
     <configurations>
@@ -92,11 +91,6 @@
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>
-            <effects>
-                <effect-type name="AlphaClamp">
-                    <effect id="alphaclamp" />
-                </effect-type>
-            </effects>
             <texture original-source="C:\Users\whyha\Downloads\minesweeper.png" />
             <tiles />
         </object-type>
