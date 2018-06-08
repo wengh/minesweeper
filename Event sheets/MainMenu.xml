@@ -133,7 +133,7 @@
                     <param id="1" name="Parameter {n}"></param>
                 </action>
                 <action id="-12" name="Set group active" sid="137176874415150" type="System">
-                    <param id="0" name="Group name">&quot;Local&quot;</param>
+                    <param id="0" name="Group name">&quot;Singleplayer&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
             </actions>

@@ -3,10 +3,17 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game</name>
     <events>
+        <comment>Lien de projet</comment>
+        <comment>https://github.com/Why7090/minesweeper</comment>
+        <comment>Jouer en ligne</comment>
+        <comment>http://wenghy.me/minesweeper/play</comment>
+        <comment>================================</comment>
+        <comment>Constantes</comment>
         <variable constant="1" name="MINE" sid="318673168704836" static="0" type="number">9</variable>
         <variable constant="1" name="Toggled_mine" sid="944331158549262" static="0" type="number">10</variable>
         <variable constant="1" name="COVERed" sid="761630704098814" static="0" type="number">11</variable>
         <variable constant="1" name="FLAG" sid="835820118437903" static="0" type="number">12</variable>
+        <comment>Variables</comment>
         <variable constant="0" name="multiplayer" sid="459188988239410" static="0" type="number">0</variable>
         <variable comment="Localization" constant="0" name="loc" sid="511140617443556" static="0" type="number">0</variable>
         <variable comment="Player name" constant="0" name="name" sid="954616974083296" static="0" type="text">Player</variable>
@@ -378,7 +385,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" inactive="1" sid="399470646121107" title="Local">
+        <event-group description="" inactive="1" sid="399470646121107" title="Singleplayer">
             <sub-events>
                 <event-block sid="747731563806489">
                     <conditions>
@@ -3186,7 +3193,6 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <comment>Initialisation multi-joueur</comment>
                 <variable constant="0" name="lastHealth" sid="555419483493397" static="1" type="number">100</variable>
                 <event-block sid="755200099216058">
                     <conditions>
@@ -3282,6 +3288,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Initialisation multi-joueur</comment>
                 <event-block sid="571210242226127">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="579849607432416" type="System" />
