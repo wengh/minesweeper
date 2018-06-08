@@ -58,7 +58,7 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
+                        <opacity>0.5</opacity>
                     </world>
                     <tilemap-data>
                         <width>80</width>
@@ -151,7 +151,7 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
+                        <opacity>0.5</opacity>
                     </world>
                     <tilemap-data>
                         <width>80</width>
