@@ -15,7 +15,7 @@
         <variable constant="0" name="height" sid="328010350763564" static="0" type="number">0</variable>
         <variable constant="0" name="x" sid="315770356282180" static="0" type="number">0</variable>
         <variable constant="0" name="y" sid="783073664343865" static="0" type="number">0</variable>
-        <variable constant="0" name="currency" sid="486950287135627" static="0" type="text">D</variable>
+        <variable constant="0" name="exitConfirm" sid="417162296075493" static="0" type="text">Are you sure to quit game and return to main menu?</variable>
         <variable constant="0" name="deathMessage" sid="544259066473916" static="0" type="text">You&apos;re died. Please refresh this page to play again.</variable>
         <variable constant="0" name="syncQueued" sid="607399681307316" static="0" type="number">0</variable>
         <variable constant="0" name="syncCooldown" sid="838543197546370" static="0" type="number">0</variable>
@@ -244,9 +244,9 @@
                                     <param id="0" name="Variable">deathMessage</param>
                                     <param id="1" name="Value">&quot;You died. Please reload this page to play again.&quot;</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="588030581874261" type="System">
-                                    <param id="0" name="Variable">currency</param>
-                                    <param id="1" name="Value">&quot;D&quot;</param>
+                                <action id="-9" name="Set value" sid="101258880767643" type="System">
+                                    <param id="0" name="Variable">exitConfirm</param>
+                                    <param id="1" name="Value">&quot;Are you sure to quit game and return to main menu?&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -263,9 +263,9 @@
                                     <param id="0" name="Variable">deathMessage</param>
                                     <param id="1" name="Value">&quot;Vous êtes mort. Pour rejoindre, veuillez rechargez cette page.&quot;</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="165418268591110" type="System">
-                                    <param id="0" name="Variable">currency</param>
-                                    <param id="1" name="Value">&quot;E&quot;</param>
+                                <action id="-9" name="Set value" sid="855385206930940" type="System">
+                                    <param id="0" name="Variable">exitConfirm</param>
+                                    <param id="1" name="Value">&quot;Êtes-vous sûre de quitter le jeu et de retourner au menu principal?&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -282,9 +282,9 @@
                                     <param id="0" name="Variable">deathMessage</param>
                                     <param id="1" name="Value">&quot;你死了，请刷新此网页以重新开始。&quot;</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="102838794916371" type="System">
-                                    <param id="0" name="Variable">currency</param>
-                                    <param id="1" name="Value">&quot;Y&quot;</param>
+                                <action id="-9" name="Set value" sid="570012031555063" type="System">
+                                    <param id="0" name="Variable">exitConfirm</param>
+                                    <param id="1" name="Value">&quot;是否要退出游戏并返回主菜单？&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3616,6 +3616,23 @@
                 <action id="8" name="Set flipped" sid="784218324902104" type="Sprite">
                     <param id="0" name="State">1</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="218889565400116">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="721494823209831" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">HomeButton</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="973382908327634" type="System">
+                    <param id="0" name="First value">Browser.ExecJS(&quot;confirm(&apos;&quot; &amp; exitConfirm &amp; &quot;&apos;) ? 1 : 0&quot;)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Reload" sid="690740620784768" type="Browser" />
             </actions>
         </event-block>
     </events>

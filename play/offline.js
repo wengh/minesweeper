@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1528382791,
+	"version": 1528467429,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -26,6 +26,7 @@
 		"images/parachute-sheet0.png",
 		"images/parachuteprogress-sheet0.png",
 		"images/hint-sheet0.png",
+		"images/homebutton-sheet0.png",
 		"media/explosion.m4a",
 		"media/explosion.ogg",
 		"media/click.ogg",

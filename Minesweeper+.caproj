@@ -2,7 +2,7 @@
 <c2project>
     <name>Minesweeper+</name>
     <description></description>
-    <version>0.8.1</version>
+    <version>0.8.2</version>
     <author>Weng Haoyu</author>
     <author-email>whyharry9@gmail.com</author-email>
     <author-website>http://wenghy.me</author-website>
@@ -471,6 +471,14 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="352870107640413" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HomeButton" sid="616407841300911">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="405793399260628" speed="5">
+                    <frame duration="1" hotspotX="-0.181818" hotspotY="0.1" />
                 </animation>
             </animation-folder>
         </object-type>

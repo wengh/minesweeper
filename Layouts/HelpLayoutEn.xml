@@ -692,6 +692,33 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Tutorial" uid="135">
+                    <properties>
+                        <text>10 years ago, geologists discovered a region rich in precious metal. In order to own the region, many states fought each other here. The war ended 8 years later, but land mines and duds buried under the surface turned the object of the dispute a minefield. As a professional explorer, you’ll represent your state. You must collect resources while marking the mines and eliminating our enemies with grenades. When you open a tile, you get one point if it’s safe, and you lose one life if it’s unfortunately a mine. You can throw grenades, which cost 5 points each, every 2 seconds in the direction of your cursor. Its damage decreases according to the distance to the player. Be careful, you have only 5 lives! To switch page, click the buttons on the right.</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Rockwell,-12,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>2</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>296.5</x>
+                        <y>180.5</y>
+                        <z>0</z>
+                        <width>450</width>
+                        <height>254</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>

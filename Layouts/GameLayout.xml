@@ -717,6 +717,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="HomeButton" uid="136">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>583</x>
+                        <y>4</y>
+                        <z>0</z>
+                        <width>11</width>
+                        <height>10</height>
+                        <depth>0</depth>
+                        <hotspotX>-0.181818187</hotspotX>
+                        <hotspotY>0.100000001</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
