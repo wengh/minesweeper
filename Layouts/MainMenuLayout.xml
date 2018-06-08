@@ -384,9 +384,9 @@
                     <properties>
                         <text>Some multiplayer features may be buggy on IE and Edge. Please use another browser.</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Rockwell,-12,400,0</font>
+                        <font>Rockwell,-11,400,0</font>
                         <color>153,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
+                        <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
@@ -395,7 +395,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>297</x>
+                        <x>303</x>
                         <y>335</y>
                         <z>0</z>
                         <width>582</width>

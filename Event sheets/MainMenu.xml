@@ -244,7 +244,7 @@
                             <param id="1" name="Value">&quot;HelpLayoutEn&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="217992414140025" type="Tutorial">
-                            <param id="0" name="Text">&quot;Some multiplayer features may be unstable on IE and Edge. Please use another browser.&quot;</param>
+                            <param id="0" name="Text">&quot;Some features may be unstable on IE and Edge. Please use another browser.&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -277,7 +277,7 @@
                             <param id="1" name="Value">&quot;HelpLayoutFr&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="932447705864920" type="Tutorial">
-                            <param id="0" name="Text">&quot;Certains fonctionnements du multi-joueur peuvent être instable sur IE et Edge. Veuillez changer le navigateur.&quot;</param>
+                            <param id="0" name="Text">&quot;Certains fonctionnements peuvent être instables sur IE et Edge. Veuillez changer le navigateur.&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -310,7 +310,7 @@
                             <param id="1" name="Value">&quot;HelpLayoutZh&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="514664503368769" type="Tutorial">
-                            <param id="0" name="Text">&quot;使用IE或者Edge可能会导致不稳定的联机体验，请使用其他浏览器。&quot;</param>
+                            <param id="0" name="Text">&quot;使用IE或Edge可能会导致不稳定的体验，请使用其他浏览器。&quot;</param>
                         </action>
                     </actions>
                 </event-block>
