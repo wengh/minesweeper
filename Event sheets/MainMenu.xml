@@ -243,6 +243,9 @@
                             <param id="0" name="Variable">helpName</param>
                             <param id="1" name="Value">&quot;HelpLayoutEn&quot;</param>
                         </action>
+                        <action id="0" name="Set text" sid="217992414140025" type="Tutorial">
+                            <param id="0" name="Text">&quot;Some multiplayer features may be unstable on IE and Edge. Please use another browser.&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="155451975616210">
@@ -273,6 +276,9 @@
                             <param id="0" name="Variable">helpName</param>
                             <param id="1" name="Value">&quot;HelpLayoutFr&quot;</param>
                         </action>
+                        <action id="0" name="Set text" sid="932447705864920" type="Tutorial">
+                            <param id="0" name="Text">&quot;Certains fonctionnements du multi-joueur peuvent être instable sur IE et Edge. Veuillez changer le navigateur.&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="545559277025359">
@@ -302,6 +308,9 @@
                         <action id="-9" name="Set value" sid="578278396943167" type="System">
                             <param id="0" name="Variable">helpName</param>
                             <param id="1" name="Value">&quot;HelpLayoutZh&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="514664503368769" type="Tutorial">
+                            <param id="0" name="Text">&quot;使用IE或者Edge可能会导致不稳定的联机体验，请使用其他浏览器。&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -371,6 +380,21 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="880549161722913" type="Explosion" />
+            </actions>
+        </event-block>
+        <comment>Détecter IE / Edge</comment>
+        <event-block sid="902511349492266">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="983755554805139" type="System">
+                    <param id="0" name="First value">Browser.ExecJS(&quot;(window.navigator.userAgent.indexOf(&apos;MSIE &apos;) &gt; 0 || window.navigator.userAgent.indexOf(&apos;Trident/&apos;) &gt; 0 || window.navigator.userAgent.indexOf(&apos;Edge/&apos;) &gt; 0) ? 1 : 0&quot;)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="167562684250214" type="Tutorial">
+                    <param id="0" name="Visibility">1</param>
+                </action>
             </actions>
         </event-block>
     </events>
