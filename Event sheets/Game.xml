@@ -413,6 +413,17 @@
                             <param id="0" name="Pin to">Peer</param>
                             <param id="1" name="Mode">0</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="988514783887024" type="PlayerName">
+                            <param id="0" name="Pin to">Peer</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="343887836982880" type="PlayerName">
+                            <param id="0" name="Text">name</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="162782039438390" type="Peer">
+                            <param id="0" name="X">random(0, LayoutWidth)</param>
+                            <param id="1" name="Y">random(0, LayoutHeight)</param>
+                        </action>
                         <action id="-9" name="Set value" sid="823090243695610" type="System">
                             <param id="0" name="Variable">x</param>
                             <param id="1" name="Value">Base.PositionToTileX(Peer.X)</param>
@@ -426,13 +437,6 @@
                             <param id="1" name="Tile Y">y - 1</param>
                             <param id="2" name="Width">3</param>
                             <param id="3" name="Height">3</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="988514783887024" type="PlayerName">
-                            <param id="0" name="Pin to">Peer</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action id="0" name="Set text" sid="343887836982880" type="PlayerName">
-                            <param id="0" name="Text">name</param>
                         </action>
                         <action id="26" name="Set listener object" sid="813165511220965" type="Audio">
                             <param id="0" name="Object">Peer</param>
@@ -449,6 +453,8 @@
                         <action id="-9" name="Destroy" sid="429421918586498" type="Coin" />
                         <action id="-9" name="Destroy" sid="852571862379685" type="Score" />
                         <action id="-9" name="Destroy" sid="214214179197316" type="ParachuteProgress" />
+                        <action id="-9" name="Destroy" sid="467256462044918" type="LeaderName" />
+                        <action id="-9" name="Destroy" sid="760961905702068" type="LeaderScore" />
                         <action id="-10" name="Set value" sid="241851631515015" type="Peer">
                             <param id="0" name="Instance variable">spawnX</param>
                             <param id="1" name="Value">Peer.X</param>
